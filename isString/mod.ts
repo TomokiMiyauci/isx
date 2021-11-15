@@ -13,7 +13,7 @@
  * @beta
  */
 function isString(value: unknown): value is string {
-  return typeof value === "boolean";
+  return typeof value === "string";
 }
 
 export { isString };
