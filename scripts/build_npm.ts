@@ -9,7 +9,7 @@ await build({
   },
   package: {
     name: "isxx",
-    version: Deno.args[0],
+    version: Deno.args[0]?.replace(/^v/, ""),
     description: "TypeScript-first is functions collection",
     license: "MIT",
     sideEffects: false,
