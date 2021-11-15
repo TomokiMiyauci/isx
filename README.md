@@ -1,21 +1,21 @@
 <p align="center">
-  <h1 align="center">farray</h1>
+  <h1 align="center">isx</h1>
 </p>
 
 <p align="center">
-TypeScript-first functional array utility
+TypeScript-first is function collection
 </p>
 
 <div align="center">
 
-[![test](https://github.com/TomokiMiyauci/farray/actions/workflows/test.yml/badge.svg)](https://github.com/TomokiMiyauci/farray/actions/workflows/test.yml)
-[![GitHub release](https://img.shields.io/github/release/TomokiMiyauci/farray.svg)](https://github.com/TomokiMiyauci/farray/releases)
-![npm download](https://img.shields.io/npm/dw/farray?color=blue)
+[![test](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yml/badge.svg)](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yml)
+[![GitHub release](https://img.shields.io/github/release/TomokiMiyauci/isx.svg)](https://github.com/TomokiMiyauci/isx/releases)
+![npm download](https://img.shields.io/npm/dw/isx?color=blue)
 
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/TomokiMiyauci/farray)
-[![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/farray.svg)](https://david-dm.org/TomokiMiyauci/farray)
-[![codecov](https://codecov.io/gh/TomokiMiyauci/farray/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/farray)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/farray/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/farray&utm_campaign=Badge_Grade)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/TomokiMiyauci/isx)
+[![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/isx.svg)](https://david-dm.org/TomokiMiyauci/isx)
+[![codecov](https://codecov.io/gh/TomokiMiyauci/isx/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/isx)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/isx/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/isx&utm_campaign=Badge_Grade)
 ![npm type definitions](https://img.shields.io/npm/types/lauqe)
 ![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)
@@ -24,133 +24,109 @@ TypeScript-first functional array utility
 
 </div>
 
+## What
+
+This is a very small collection of is? functions.
+
+Some of them contain wrappers for `typeof` statements, which may be used to
+reduce the number of repeated expressions and thus reduce the bundle size.
+
 ## Install
-
-### Node.js
-
-```bash
-npm i farray
-```
-
-```bash
-yarn add farray
-```
-
-```bash
-pnpm add farray
-```
 
 ### Deno
 
 ```ts
-import { head } from 'https://esm.sh/farray'
+import { isString } from "https://deno.land/x/isx";
+```
+
+### Node.js
+
+```bash
+npm i isxx
+```
+
+```bash
+yarn add isxx
+```
+
+```bash
+pnpm add isxx
 ```
 
 ## API
 
-### head
+### isBoolean
 
-Take first element or list safety
+Whatever argument is type of `boolean` or not
 
 #### types
 
 ```ts
-declare const head: <T extends string | readonly unknown[]>(val: T) => Head<T>
+declare const isBoolean: (val: unknown) => val is boolean;
 ```
 
 #### examples
 
 ```ts
-// String
-head('') // ''
-head('hello') // 'h'
+isBoolean(true); // true
+isBoolean("hello"); // false
 ```
 
-```ts
-// Array
-head<[]> // undefined
-head<['hello', 'world']> // 'hello'
-```
+### isLength0
 
-### last
-
-Take last element of list safety
+Whatever argument length is `0` or not.
 
 #### types
 
 ```ts
-declare const last: <T extends string | readonly unknown[]>(val: T) => Last<T>
+declare const isLength0: (val: { length: number }) => boolean;
 ```
 
 #### examples
 
 ```ts
-// String
-last('') // ''
-last('hello') // 'o'
+isLength0([]); // true
+isLength0("hello"); // false
 ```
 
-```ts
-// Array
-last('hello', 'new', 'world') // 'world'
-last([]) // undefined
-last(['one', 2, 3, 4]) // 4
-```
+### isString
 
-### take
-
-Return a slice of string or array with `n` elements taken from the beginning.
+Whatever argument is type of `string` or not
 
 #### types
 
 ```ts
-declare const take: <T extends string | readonly unknown[]>(
-  howMany: number,
-  val: T
-) => T
+declare const isString: (val: unknown) => val is string;
 ```
 
 #### examples
 
 ```ts
-// String
-take(3, 'hello') // 'hel'
+isString("hello world"); // true
+isString(1000); // false
 ```
 
-```ts
-// Array
-take(3, [1, 2, 3, 4]) // [1, 2, 3]
-```
+### isNumber
 
-### takeLast
-
-Return a slice of string or array with `n` elements taken from the end
+Whatever argument is type of `number` or not
 
 #### types
 
 ```ts
-declare const takeLast: <T extends string | readonly unknown[]>(
-  howMany: number,
-  val: T
-) => T
+declare const isNumber: (val: unknown) => val is number;
 ```
 
 #### examples
 
 ```ts
-// String
-takeLast(3, 'hello') // 'llo'
-```
-
-```ts
-// Array
-takeLast(3, [1, 2, 3, 4]) // [2, 3, 4]
+isNumber(0); // true
+isNumber("hello"); // false
 ```
 
 ## :handshake: Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check
-[issues](https://github.com/TomokiMiyauci/farray/issues).
+[issues](https://github.com/TomokiMiyauci/isx/issues).
 
 ## :seedling: Show your support
 
