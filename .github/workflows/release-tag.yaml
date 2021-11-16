@@ -76,6 +76,9 @@ jobs:
             - recursive: true
               args: [--frozen-lockfile, --prefer-offline]
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Release
         run: pnpm semantic-release
         env:
