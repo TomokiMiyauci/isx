@@ -30,7 +30,7 @@ jobs:
           deno-version: ${{ matrix.deno }}
 
       - name: npm build
-        run: deno run -A ./scripts/build_npm.ts ${{steps.version.outputs.TAG_VERSION}}
+        run: deno run -A scripts/build_npm.ts ${{steps.version.outputs.TAG_VERSION}}
 
       - uses: apexskier/github-semver-parse@v1
         id: semver
