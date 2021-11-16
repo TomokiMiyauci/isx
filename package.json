@@ -1,4 +1,5 @@
 {
+  "name": "isx",
   "private": true,
   "scripts": {
     "release": "semantic-release"
