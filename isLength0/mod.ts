@@ -6,12 +6,15 @@
  *
  * @example
  * ```ts
+ * import { isLength0 } from './mod.ts'
  * isLength0([]) // true
  * isLength0('hello') // false
  * ```
  *
  * @beta
  */
-const isLength0 = (val: { length: number }): boolean => !val.length;
+function isLength0(val: { length: number }): boolean {
+  return !val.length;
+}
 
 export { isLength0 };
