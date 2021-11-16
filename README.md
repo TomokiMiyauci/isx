@@ -10,7 +10,8 @@ TypeScript-first is function collection
 
 [![test](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yml/badge.svg)](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yml)
 [![GitHub release](https://img.shields.io/github/release/TomokiMiyauci/isx.svg)](https://github.com/TomokiMiyauci/isx/releases)
-![npm download](https://img.shields.io/npm/dw/isx?color=blue)
+[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/isx/mod.ts)
+![npm download](https://img.shields.io/npm/dw/isxx?color=blue)
 
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/TomokiMiyauci/isx)
 [![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/isx.svg)](https://david-dm.org/TomokiMiyauci/isx)
