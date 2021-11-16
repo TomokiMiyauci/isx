@@ -20,12 +20,12 @@ await build({
     },
     repository: {
       type: "git",
-      url: "https://github.com/TomokiMiyauci/isxx.git",
+      url: "https://github.com/TomokiMiyauci/isx.git",
     },
     bugs: {
-      url: "https://github.com/username/package/issues",
+      url: "https://github.com/TomokiMiyauci/isx/issues",
     },
-    homepage: "https://github.com/TomokiMiyauci/isxx#readme",
+    homepage: "https://github.com/TomokiMiyauci/isx#readme",
     funding: {
       type: "patreon",
       url: "https://www.patreon.com/tomoki_miyauci",

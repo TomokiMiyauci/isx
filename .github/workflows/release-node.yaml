@@ -11,25 +11,47 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+        deno: [1.16.0]
+        node: [16]
 
     steps:
       - name: Get tag version
         if: startsWith(github.ref, 'refs/tags/')
-        id: get_tag_version
+        id: version
         run: echo ::set-output name=TAG_VERSION::${GITHUB_REF/refs\/tags\//}
 
       - uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: ${{ matrix.node }}
           registry-url: "https://registry.npmjs.org"
 
-      - name: npm build
-        run: deno run -A ./scripts/build_npm.ts ${{steps.get_tag_version.outputs.TAG_VERSION}}
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno }}
 
-      - name: npm publish
-        if: startsWith(github.ref, 'refs/tags/')
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: npm build
+        run: deno run -A ./scripts/build_npm.ts ${{steps.version.outputs.TAG_VERSION}}
+
+      - uses: apexskier/github-semver-parse@v1
+        id: semver
+        with:
+          version: ${{steps.version.outputs.TAG_VERSION}}
+
+      - name: Set tag
+        id: tag
         run: |
-          cd npm
-          npm publish --tag beta
+          DARTY_PRELELEASE=${{steps.semver.outputs.prerelease}}
+          PRELEREASE=${DARTY_PRELELEASE%.*}
+
+          [ "$PRELEREASE" = "" ] && TAG=latest || TAG=$PRELEREASE
+
+          echo TAG: $TAG
+          echo ::set-output name=RELEASE_TAG::$TAG
+
+      - uses: JS-DevTools/npm-publish@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./npm/package.json
+          tag: ${{ steps.tag.outputs.RELEASE_TAG }}
+
