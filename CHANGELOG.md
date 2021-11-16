@@ -1,3 +1,10 @@
+# [1.0.0-beta.6](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-11-16)
+
+
+### Features
+
+* add `isFunction` and `isPrimitive` functions ([4fd0bd3](https://github.com/TomokiMiyauci/isx/commit/4fd0bd30c4487f4163fed8791f76fab81eeb1eea))
+
 # [1.0.0-beta.5](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-11-16)
 
 
