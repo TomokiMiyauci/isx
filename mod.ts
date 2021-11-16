@@ -5,3 +5,4 @@ export * from "./isLength0/mod.ts";
 export * from "./isUndefined/mod.ts";
 export * from "./isEmptyString/mod.ts";
 export * from "./isEmptyArray/mod.ts";
+export * from "./isNull/mod.ts";
