@@ -1,3 +1,10 @@
+# [1.0.0-beta.7](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-11-17)
+
+
+### Features
+
+* add `isDate` function ([39a8605](https://github.com/TomokiMiyauci/isx/commit/39a8605062b9da9e9ead5f529a9d6805cf7b2f38))
+
 # [1.0.0-beta.6](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-11-16)
 
 
