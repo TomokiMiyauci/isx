@@ -10,3 +10,4 @@ export * from "./isObject/mod.ts";
 export * from "./isEmptyObject/mod.ts";
 export * from "./isFunction/mod.ts";
 export * from "./isPrimitive/mod.ts";
+export * from "./isDate/mod.ts";

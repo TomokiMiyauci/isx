@@ -1,8 +1,16 @@
-import { build } from "https://deno.land/x/dnt/mod.ts";
+import { build } from "https://deno.land/x/dnt@0.7.0/mod.ts";
+
+import {
+  dirname,
+  fromFileUrl,
+  resolve,
+} from "https://deno.land/std@0.114.0/path/mod.ts";
+
+const baseDir = resolve(dirname(fromFileUrl(import.meta.url)), "..");
 
 await build({
-  entryPoints: ["./mod.ts"],
-  outDir: "./npm",
+  entryPoints: [resolve(baseDir, "mod.ts")],
+  outDir: resolve(baseDir, "npm"),
   test: false,
   compilerOptions: {
     sourceMap: true,
