@@ -8,7 +8,6 @@ Deno.test({
     defineTable({
       "() => {}": true,
       function: true,
-      promise: true,
     }).forEach(([value, expected]) =>
       assertEquals(isFunction(value), expected)
     ),
