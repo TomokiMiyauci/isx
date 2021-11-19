@@ -13,3 +13,4 @@ export * from "./isPrimitive/mod.ts";
 export * from "./isDate/mod.ts";
 export * from "./isPromise/mod.ts";
 export * from "./isError/mod.ts";
+export * from "./isNil/mod.ts";
