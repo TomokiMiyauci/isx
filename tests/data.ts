@@ -19,8 +19,10 @@ const MAP = {
   weakMap: new WeakMap(),
   weakSet: new WeakSet(),
   "() => {}": () => {},
+  promise: async () => {},
   function: new Function(),
   date: new Date("2000/1/1"),
+  error: Error(),
 };
 
 const defineTable = (map: { [k in keyof typeof MAP]?: unknown }) => {

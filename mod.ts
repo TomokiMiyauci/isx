@@ -11,3 +11,5 @@ export * from "./isEmptyObject/mod.ts";
 export * from "./isFunction/mod.ts";
 export * from "./isPrimitive/mod.ts";
 export * from "./isDate/mod.ts";
+export * from "./isPromise/mod.ts";
+export * from "./isError/mod.ts";

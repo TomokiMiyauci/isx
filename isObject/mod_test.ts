@@ -15,6 +15,7 @@ Deno.test({
       "weakSet": true,
       "{{}}": true,
       "{}": true,
+      error: true,
     }).forEach(([value, expected]) => assertEquals(isObject(value), expected));
   },
 });
