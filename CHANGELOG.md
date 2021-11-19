@@ -1,3 +1,10 @@
+# [1.0.0-beta.8](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2021-11-19)
+
+
+### Features
+
+* add `isPromise` and `isError` functions ([18ed614](https://github.com/TomokiMiyauci/isx/commit/18ed6145b14d46475dd9b608da0af32bdd0f6504))
+
 # [1.0.0-beta.7](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-11-17)
 
 
