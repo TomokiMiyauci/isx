@@ -1,3 +1,10 @@
+# [1.0.0-beta.10](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-11-19)
+
+
+### Bug Fixes
+
+* export `isNil` function globaly ([cbf5536](https://github.com/TomokiMiyauci/isx/commit/cbf5536ccae85ac0188bdd31630231ee5da1b9b0))
+
 # [1.0.0-beta.9](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2021-11-19)
 
 
