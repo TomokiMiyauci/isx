@@ -1,3 +1,11 @@
+# [1.0.0-beta.12](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-11-20)
+
+
+### Features
+
+* **date:** add `isValidDate` function ([b0d2412](https://github.com/TomokiMiyauci/isx/commit/b0d24126517c9ba871eb9435d88cd7079b5f3bdf))
+* **symbol:** add `isSymbol` function ([f24e250](https://github.com/TomokiMiyauci/isx/commit/f24e2505354297a909988b35cc6e202447c4a945))
+
 # [1.0.0-beta.11](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-11-20)
 
 
