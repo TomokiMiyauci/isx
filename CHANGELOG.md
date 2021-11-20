@@ -1,3 +1,11 @@
+# [1.0.0-beta.11](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-11-20)
+
+
+### Features
+
+* add `isFalse` function ([5091300](https://github.com/TomokiMiyauci/isx/commit/50913007daef76fb0791d3adfb6a3d9c27ceb280))
+* add `isTrue` function ([a1e5f61](https://github.com/TomokiMiyauci/isx/commit/a1e5f6113c4dd099c09c4b5437194d8b65fdf3f7))
+
 # [1.0.0-beta.10](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-11-19)
 
 
