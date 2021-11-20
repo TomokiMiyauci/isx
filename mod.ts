@@ -18,3 +18,4 @@ export * from "./isTrue/mod.ts";
 export * from "./isFalse/mod.ts";
 export * from "./date/mod.ts";
 export * from "./symbol/mod.ts";
+export * from "./number/mod.ts";
