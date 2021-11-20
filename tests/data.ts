@@ -1,3 +1,8 @@
+import { DATE_MAP } from "./date.ts";
+import { makeDefineTable } from "./utils.ts";
+
+const { date } = DATE_MAP;
+
 const MAP = {
   0: 0,
   1: 1,
@@ -21,15 +26,10 @@ const MAP = {
   "() => {}": () => {},
   promise: Promise.resolve(),
   function: new Function(),
-  date: new Date("2000/1/1"),
+  date,
   error: new Error(),
 };
 
-const defineTable = (map: { [k in keyof typeof MAP]?: unknown }) => {
-  return Object.entries({ ...MAP }).map(([key, value]) => {
-    const v = key in map ? (map as never)[key] : false;
-    return [value, v];
-  });
-};
+const defineTable = makeDefineTable(MAP);
 
 export { defineTable };
