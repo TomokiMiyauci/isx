@@ -14,3 +14,5 @@ export * from "./isDate/mod.ts";
 export * from "./isPromise/mod.ts";
 export * from "./isError/mod.ts";
 export * from "./isNil/mod.ts";
+export * from "./isTrue/mod.ts";
+export * from "./isFalse/mod.ts";
