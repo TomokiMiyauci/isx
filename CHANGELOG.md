@@ -1,3 +1,13 @@
+# [1.0.0-beta.13](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2021-11-20)
+
+
+### Features
+
+* **number:** add `isEven` function ([a9d900d](https://github.com/TomokiMiyauci/isx/commit/a9d900d4967826101a5b3a2ac83e7876b0d2d67d))
+* **number:** add `isNegativeNumber` function ([fb845a8](https://github.com/TomokiMiyauci/isx/commit/fb845a84f781fc86368c6dc8aef5bfccdb271044))
+* **number:** add `isOdd` function ([1090064](https://github.com/TomokiMiyauci/isx/commit/1090064c91dc1e79a146513498203f954de6bc9a))
+* **number:** add `isPositiveNumber` function ([0ff70ea](https://github.com/TomokiMiyauci/isx/commit/0ff70eaf63b514eeb19fe70cc9a48468a5b1e8af))
+
 # [1.0.0-beta.12](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-11-20)
 
 
