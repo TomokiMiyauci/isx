@@ -1,5 +1,8 @@
 {
   "lint": {
+    "rules": {
+      "exclude": ["ban-types"]
+    },
     "files": {
       "exclude": [
         "node_modules",

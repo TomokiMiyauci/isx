@@ -8,6 +8,7 @@
   "deno.suggest.imports.hosts": {
     "https://deno.land": true
   },
+  "deno.config": "deno.json",
   "deno.codeLens.implementations": true,
   "deno.codeLens.referencesAllFunctions": true,
   "deno.internalDebug": true,
