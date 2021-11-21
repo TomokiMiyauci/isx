@@ -1,3 +1,5 @@
+// TODO:(miyauci) Bundlers such as aleph.js do not handle re-exports. Therefore, each module is exported directly.
+
 export * from "./isString/mod.ts";
 export * from "./isBoolean/mod.ts";
 export * from "./isNumber/mod.ts";
@@ -15,7 +17,11 @@ export * from "./isError/mod.ts";
 export * from "./isNil/mod.ts";
 export * from "./isTrue/mod.ts";
 export * from "./isFalse/mod.ts";
-export * from "./date/mod.ts";
-export * from "./symbol/mod.ts";
-export * from "./number/mod.ts";
-export * from "./object/mod.ts";
+export * from "./date/is_valid_date.ts";
+export * from "./symbol/is_symbol.ts";
+export * from "./number/is_odd.ts";
+export * from "./number/is_even.ts";
+export * from "./number/is_positive_number.ts";
+export * from "./number/is_negative_number.ts";
+export { isSize0 } from "./object/is_size_0.ts";
+export * from "./object/is_empty_object.ts";
