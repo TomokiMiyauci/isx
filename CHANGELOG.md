@@ -1,3 +1,15 @@
+# [1.0.0-beta.14](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-11-21)
+
+
+### Bug Fixes
+
+* **object:** fix `isEmptyObject` logic ([7873b2c](https://github.com/TomokiMiyauci/isx/commit/7873b2caeffd430c3d88b3d2ced3051e053d4308))
+
+
+### Features
+
+* **object:** add `isSize0` function ([0efb1af](https://github.com/TomokiMiyauci/isx/commit/0efb1af2e010180c33187cfabe2a41b9e9975f2f))
+
 # [1.0.0-beta.13](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2021-11-20)
 
 
