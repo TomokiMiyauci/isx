@@ -1,3 +1,10 @@
+# [1.0.0-beta.15](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-11-21)
+
+
+### Bug Fixes
+
+* do not re-export for unsupported bundler ([3fd20d7](https://github.com/TomokiMiyauci/isx/commit/3fd20d73444eff7e86b1e2d750f1440922d8468e))
+
 # [1.0.0-beta.14](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-11-21)
 
 
