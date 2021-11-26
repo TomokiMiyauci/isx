@@ -26,3 +26,4 @@ export * from "./number/is_negative_number.ts";
 export { isSize0 } from "./object/is_size_0.ts";
 export * from "./object/is_empty_object.ts";
 export * from "./string/is_date_string.ts";
+export * from "./string/is_hex_color.ts";
