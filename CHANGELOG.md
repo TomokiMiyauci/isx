@@ -1,3 +1,16 @@
+# [1.0.0-beta.16](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2021-11-26)
+
+
+### Bug Fixes
+
+* **string:** fix export module ([c2d602e](https://github.com/TomokiMiyauci/isx/commit/c2d602e948acd5af36c41e0b182753b75d9f63f3))
+
+
+### Features
+
+* **string:** add `isDateString` function ([86cd23a](https://github.com/TomokiMiyauci/isx/commit/86cd23a4b9be26835f30fe9b981d9993c9f48553))
+* **string:** add `isHexColor` function ([d5266fa](https://github.com/TomokiMiyauci/isx/commit/d5266fa74281422d95111762f2f2b722b11b9f60))
+
 # [1.0.0-beta.15](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-11-21)
 
 
