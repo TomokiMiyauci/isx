@@ -1,3 +1,11 @@
+# [1.0.0-beta.17](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2021-11-28)
+
+
+### Features
+
+* **iterable:** add `isIterable` function ([c7f2450](https://github.com/TomokiMiyauci/isx/commit/c7f24508d19f351fcf784166b3130f0e9d3790ce))
+* **union:** add `isEmpty` function ([6262cd4](https://github.com/TomokiMiyauci/isx/commit/6262cd4ad8b69b10d1e87f7c744d39509d8a7d7a))
+
 # [1.0.0-beta.16](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2021-11-26)
 
 
