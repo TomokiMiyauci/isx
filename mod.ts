@@ -28,3 +28,4 @@ export * from "./object/is_empty_object.ts";
 export * from "./string/is_date_string.ts";
 export * from "./string/is_hex_color.ts";
 export * from "./iterable/is_iterable.ts";
+export * from "./union/is_empty.ts";
