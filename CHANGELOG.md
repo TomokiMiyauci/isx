@@ -1,3 +1,10 @@
+# [1.0.0-beta.18](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.17...1.0.0-beta.18) (2022-08-03)
+
+
+### Features
+
+* **unknown:** add `isEmpty` function ([ce708b0](https://github.com/TomokiMiyauci/isx/commit/ce708b028a405be963dbcfa734e75b518770984f))
+
 # [1.0.0-beta.17](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2021-11-28)
 
 
