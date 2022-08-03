@@ -1,4 +1,5 @@
 import {
+  isAsyncIterable,
   isBoolean,
   isDate,
   isDateFormat,
@@ -342,4 +343,37 @@ Deno.test({
     }).forEach(([value, expected]) =>
       assertEquals(isValidDate(value), expected)
     ),
+});
+
+Deno.test({
+  name: "isAsyncIterable",
+  fn: () => {
+    async function* asyncGen() {}
+
+    const table: [
+      ...Parameters<typeof isAsyncIterable>,
+      ReturnType<typeof isAsyncIterable>,
+    ][] = [
+      [false, false],
+      [asyncGen, false],
+      [{}, false],
+      [[], false],
+      ["", false],
+      [{
+        [Symbol.asyncIterator]: 1,
+      }, false],
+      [asyncGen(), true],
+      [{
+        async *[Symbol.asyncIterator]() {
+          yield "hello";
+          yield "async";
+          yield "iteration!";
+        },
+      }, true],
+    ];
+
+    table.forEach(([value, result]) =>
+      assertEquals(isAsyncIterable(value), result)
+    );
+  },
 });

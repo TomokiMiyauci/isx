@@ -348,3 +348,25 @@ export function isHexColor(value: unknown): boolean {
 export function isValidDate(value: unknown): value is Date {
   return isDate(value) && _isValidDate(value);
 }
+
+/** Whether the value is `AsyncIterable` or not.
+ * @param value - Any value.
+ * ```ts
+ * import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(
+ *   isAsyncIterable({
+ *     async *[Symbol.asyncIterator]() {
+ *       yield "hello";
+ *     },
+ *   }),
+ *   true,
+ * );
+ * assertEquals(isAsyncIterable(() => {}), false);
+ * ```
+ */
+export function isAsyncIterable<T>(
+  value: unknown,
+): value is AsyncIterable<T> {
+  return isFunction(Object(value)[Symbol.asyncIterator]);
+}
