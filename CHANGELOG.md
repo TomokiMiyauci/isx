@@ -1,3 +1,17 @@
+# [1.0.0-beta.19](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.18...1.0.0-beta.19) (2022-08-03)
+
+
+### Bug Fixes
+
+* **unknown:** fix `isIterable` function that exclude not Iterator ([0d2224e](https://github.com/TomokiMiyauci/isx/commit/0d2224ec1d17722eea22f46b0e0eb582d321be97))
+
+
+### Features
+
+* **unknown:** add `isAsyncGenerator` function ([15fc58e](https://github.com/TomokiMiyauci/isx/commit/15fc58e89ab75ae23808417e0592b1f14d69c333))
+* **unknown:** add `isAsyncIterable` function ([9491020](https://github.com/TomokiMiyauci/isx/commit/9491020bf3cf7ab2e0f2d09318463b24c8ab5f83))
+* **unknown:** add `isPlainObject` function ([8f6f302](https://github.com/TomokiMiyauci/isx/commit/8f6f302b6bbe5200dc3043b7fb794dbae7e7f2fa))
+
 # [1.0.0-beta.18](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.17...1.0.0-beta.18) (2022-08-03)
 
 
