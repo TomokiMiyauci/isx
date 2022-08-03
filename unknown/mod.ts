@@ -143,6 +143,21 @@ export function isObject(value: unknown): value is object {
   return typeof value === "object" && !isNull(value);
 }
 
+/** Whether the value is Plain(literal) object or not.
+ * @param value - Any value.
+ * ```ts
+ * import { isPlainObject } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isPlainObject({}), true)
+ * assertEquals(isPlainObject([]), false)
+ * ```
+ */
+export function isPlainObject(
+  value: unknown,
+): value is Record<PropertyKey, unknown> {
+  return isObject(value) && value.constructor === Object;
+}
+
 /** Whether the value is `symbol` or not.
  * @param value - Any value.
  * ```ts

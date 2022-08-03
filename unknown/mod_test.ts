@@ -15,6 +15,7 @@ import {
   isNumber,
   isObject,
   isOdd,
+  isPlainObject,
   isPositiveNumber,
   isPrimitive,
   isPromise,
@@ -126,6 +127,18 @@ Deno.test({
       error: true,
       promise: true,
     }).forEach(([value, expected]) => assertEquals(isObject(value), expected));
+  },
+});
+
+Deno.test({
+  name: "isPlainObject",
+  fn: () => {
+    defineTable({
+      "{}": true,
+      "{{}}": true,
+    }).forEach(([value, expected]) =>
+      assertEquals(isPlainObject(value), expected)
+    );
   },
 });
 
