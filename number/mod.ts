@@ -2,9 +2,9 @@
  * @param value - Any `number`.
  * ```ts
  * import { isOdd } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
- * import { assertFalse, assertTrue } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertTrue(isOdd(1))
- * assertFalse(isOdd(0))
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isOdd(1), true)
+ * assertEquals(isOdd(0), false)
  * ```
  */
 export function isOdd(value: number): boolean {
@@ -15,9 +15,9 @@ export function isOdd(value: number): boolean {
  * @param value - Any `number`.
  * ```ts
  * import { isEven } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
- * import { assertFalse, assertTrue } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertTrue(isEven(0))
- * assertFalse(isEven(1))
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isEven(0), true)
+ * assertEquals(isEven(1), false)
  * ```
  */
 export function isEven(value: number): boolean {
@@ -28,9 +28,9 @@ export function isEven(value: number): boolean {
  * @param value - Any `number`.
  * ```ts
  * import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
- * import { assertFalse, assertTrue } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertTrue(isPositiveNumber(1))
- * assertFalse(isPositiveNumber(0))
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isPositiveNumber(1), true)
+ * assertEquals(isPositiveNumber(0), false)
  * ```
  */
 export function isPositiveNumber(value: number): boolean {
@@ -41,9 +41,9 @@ export function isPositiveNumber(value: number): boolean {
  * @param value - Any `number`.
  * ```ts
  * import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
- * import { assertFalse, assertTrue } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertTrue(isNegativeNumber(-1))
- * assertFalse(isEven(0))
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isNegativeNumber(-1), true)
+ * assertEquals(isNegativeNumber(0), false)
  * ```
  */
 export function isNegativeNumber(value: number): boolean {

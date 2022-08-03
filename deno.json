@@ -1,23 +1,21 @@
 {
-  "lint": {
-    "rules": {
-      "exclude": ["ban-types"]
-    },
-    "files": {
-      "exclude": [
-        "node_modules",
-        "npm"
-      ]
-    }
+  "tasks": {
+    "test": "deno test --doc"
   },
-
   "fmt": {
     "files": {
-      "exclude": [
-        "node_modules",
-        "npm",
-        "CHANGELOG.md"
-      ]
+      "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
     }
-  }
+  },
+  "lint": {
+    "files": {
+      "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
+    }
+  },
+  "test": {
+    "files": {
+      "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
+    }
+  },
+  "importMap": "_test_import_map.json"
 }

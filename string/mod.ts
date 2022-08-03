@@ -2,10 +2,10 @@
  * @param value - Any `string`.
  * ```ts
  * import { isDateFormat } from "https://deno.land/x/isx@$VERSION/string/mod.ts"
- * import { assertFalse, assertTrue } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertTrue(isDateFormat("2021-12-31T15:00:00.000Z"))
- * assertTrue(isDateFormat("2022/1/1"))
- * assertFalse(isDateFormat("invalid date"))
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isDateFormat("2021-12-31T15:00:00.000Z"), true)
+ * assertEquals(isDateFormat("2022/1/1"), true)
+ * assertEquals(isDateFormat("invalid date"), false)
  * ```
  */
 export function isDateFormat(value: string): boolean {
@@ -16,10 +16,10 @@ export function isDateFormat(value: string): boolean {
  * @param value - Any `string`.
  * ```ts
  * import { isHexColor } from "https://deno.land/x/isx@$VERSION/string/mod.ts"
- * import { assertFalse, assertTrue } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertTrue(isHexColor("#000000"))
- * assertTrue(isHexColor("#FFF"))
- * assertFalse(isHexColor("#ggg"))
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isHexColor("#000000"), true)
+ * assertEquals(isHexColor("#FFF"), true)
+ * assertEquals(isHexColor("#ggg"), false)
  * ```
  */
 export function isHexColor(value: string): boolean {
