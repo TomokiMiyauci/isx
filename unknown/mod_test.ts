@@ -347,6 +347,40 @@ Deno.test({
 });
 
 Deno.test({
+  name: "isAsyncIterable",
+  fn: () => {
+    async function* asyncGen() {}
+
+    const table: [
+      ...Parameters<typeof isAsyncGenerator>,
+      ReturnType<typeof isAsyncGenerator>,
+    ][] = [
+      [false, false],
+      [{}, false],
+      [[], false],
+      ["", false],
+      [{
+        [Symbol.asyncIterator]: 1,
+      }, false],
+      [{
+        async *[Symbol.asyncIterator]() {},
+      }, true],
+      [{
+        async [Symbol.asyncIterator]() {},
+        next: () => {},
+        return: () => {},
+        throw: () => {},
+      }, true],
+      [asyncGen(), true],
+    ];
+
+    table.forEach(([value, result]) =>
+      assertEquals(isAsyncIterable(value), result)
+    );
+  },
+});
+
+Deno.test({
   name: "isAsyncGenerator",
   fn: () => {
     async function* asyncGen() {}
