@@ -370,3 +370,29 @@ export function isAsyncIterable<T>(
 ): value is AsyncIterable<T> {
   return isFunction(Object(value)[Symbol.asyncIterator]);
 }
+
+/** Whether the value is `AsyncGenerator` or not.
+ * @param value - Any value.
+ * ```ts
+ * import { isAsyncGenerator } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * async function* asyncGenerator() {}
+ * assertEquals(
+ *   isAsyncGenerator(asyncGenerator()),
+ *   true,
+ * );
+ * assertEquals(isAsyncGenerator({async [Symbol.asyncIterator]() {}}), false);
+ * ```
+ */
+export function isAsyncGenerator<
+  T = unknown,
+  TReturn = unknown,
+  TNext = unknown,
+>(
+  value: unknown,
+): value is AsyncGenerator<T, TReturn, TNext> {
+  if (!isAsyncIterable(value)) return false;
+  const obj = Object(value);
+  return isFunction(obj["next"]) && isFunction(obj["return"]) &&
+    isFunction(obj["throw"]);
+}
