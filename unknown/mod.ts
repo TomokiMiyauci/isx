@@ -194,7 +194,7 @@ export function isDate(value: unknown): value is Date {
  * ```
  */
 export function isIterable<T>(value: unknown): value is Iterable<T> {
-  return Symbol.iterator in Object(value);
+  return isFunction(Object(value)[Symbol.iterator]);
 }
 
 /** Whether the value is empty or not.

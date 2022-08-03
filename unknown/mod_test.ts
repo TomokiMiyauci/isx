@@ -166,6 +166,8 @@ Deno.test({
       [Symbol.for("test"), false],
       [{}, false],
       [new Date(), false],
+      [{ [Symbol.iterator]: [] }, false],
+      [{ [Symbol.iterator]: () => {} }, true],
       ["", true],
       [[], true],
       [new Map(), true],
