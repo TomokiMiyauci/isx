@@ -1,7 +1,18 @@
-// Copyright 2021-Present the Unitest authors. All rights reserved. MIT license.
-
 import { assertEquals } from "../dev_deps.ts";
-import { isHexColor } from "./is_hex_color.ts";
+import { isDateFormat, isHexColor } from "./mod.ts";
+import { defineStringTable } from "../tests/string.ts";
+
+Deno.test({
+  name: "isDateFormat",
+  fn: () => {
+    defineStringTable({
+      "Date string": true,
+      "ISO 8601": true,
+      "YYYYMMDD hhmmss": true,
+      "YYYYMMDD": true,
+    }).forEach(([key, value]) => assertEquals(isDateFormat(key), value, key));
+  },
+});
 
 Deno.test({
   name: "isHexColor",

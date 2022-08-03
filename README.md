@@ -73,23 +73,6 @@ isBoolean(true); // true
 isBoolean("hello"); // false
 ```
 
-### isLength0
-
-Whatever argument length is `0` or not.
-
-#### types
-
-```ts
-declare const isLength0: (val: { length: number }) => boolean;
-```
-
-#### examples
-
-```ts
-isLength0([]); // true
-isLength0("hello"); // false
-```
-
 ### isString
 
 Whatever argument is type of `string` or not
