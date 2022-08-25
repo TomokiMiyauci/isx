@@ -14,6 +14,7 @@ import { isValidDate as _isValidDate } from "../date/mod.ts";
 
 /** Whether the value is `string` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isString } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -27,6 +28,7 @@ export function isString(value: unknown): value is string {
 
 /** Whether the value is `number` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -40,6 +42,7 @@ export function isNumber(value: unknown): value is number {
 
 /** Whether the value is `null` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isNull } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -53,6 +56,7 @@ export function isNull(value: unknown): value is null {
 
 /** Whether the value is `undefined` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isUndefined } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -66,6 +70,7 @@ export function isUndefined(value: unknown): value is undefined {
 
 /** Whether the value is `true` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isTrue } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -79,6 +84,7 @@ export function isTrue(value: unknown): value is true {
 
 /** Whether the value is `false` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isFalse } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -92,6 +98,7 @@ export function isFalse(value: unknown): value is false {
 
 /** Whether the value is `boolean` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isBoolean } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -105,6 +112,7 @@ export function isBoolean(value: unknown): value is boolean {
 
 /** Whether the value is nill or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isNil } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -119,6 +127,7 @@ export function isNil(value: unknown): value is null | undefined {
 
 /** Whether the value is `Function` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isFunction } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -132,6 +141,7 @@ export function isFunction(value: unknown): value is Function {
 
 /** Whether the value is `object` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isObject } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -145,6 +155,7 @@ export function isObject(value: unknown): value is object {
 
 /** Whether the value is Plain(literal) object or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isPlainObject } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -160,6 +171,7 @@ export function isPlainObject(
 
 /** Whether the value is `symbol` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isSymbol } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -173,6 +185,7 @@ export function isSymbol(value: unknown): value is symbol {
 
 /** Whether the value is `Date` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isDate } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -186,6 +199,7 @@ export function isDate(value: unknown): value is Date {
 
 /** Whether the value is `Iterable` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isIterable } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -199,6 +213,7 @@ export function isIterable<T>(value: unknown): value is Iterable<T> {
 
 /** Whether the value is empty or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isEmpty } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -219,6 +234,7 @@ export function isEmpty(value: unknown): boolean {
 
 /** Whether the value is `Error` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isError } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -232,6 +248,7 @@ export function isError(value: unknown): value is Error {
 
 /** Whether the value is {@link Primitive} or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isPrimitive } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -245,6 +262,7 @@ export function isPrimitive(value: unknown): value is Primitive {
 
 /** Whether the value is `Promise` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isPromise } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -258,6 +276,7 @@ export function isPromise<T>(value: unknown): value is Promise<T> {
 
 /** Whether the value is odd or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isOdd } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -271,6 +290,7 @@ export function isOdd(value: unknown): value is number {
 
 /** Whether the value is even or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isEven } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -284,6 +304,7 @@ export function isEven(value: unknown): value is number {
 
 /** Whether the value is positive number or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -297,6 +318,7 @@ export function isPositiveNumber(value: unknown): value is number {
 
 /** Whether the value is negative number or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -310,6 +332,7 @@ export function isNegativeNumber(value: unknown): value is number {
 
 /** Whether the value is Date format or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isDateFormat } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -324,6 +347,7 @@ export function isDateFormat(value: unknown): value is string {
 
 /** Whether the value is Hex color or not.
  * @param value - Any `string`.
+ *
  * ```ts
  * import { isHexColor } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -338,6 +362,7 @@ export function isHexColor(value: unknown): boolean {
 
 /** Whether the value is valid `Date` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isValidDate } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -351,6 +376,7 @@ export function isValidDate(value: unknown): value is Date {
 
 /** Whether the value is `AsyncIterable` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -373,6 +399,7 @@ export function isAsyncIterable<T>(
 
 /** Whether the value is `AsyncGenerator` or not.
  * @param value - Any value.
+ *
  * ```ts
  * import { isAsyncGenerator } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
