@@ -7,6 +7,7 @@ const MAP = {
   0: 0,
   1: 1,
   "-1": -1,
+  "0n": 0n,
   string: "string",
   "": "",
   false: false,

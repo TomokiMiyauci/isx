@@ -50,6 +50,14 @@ Deno.test({
 });
 
 Deno.test({
+  name: "isBigint",
+  fn: () =>
+    defineTable({
+      "0n": true,
+    }).forEach(([a, b]) => assertEquals(isNumber(a), b)),
+});
+
+Deno.test({
   name: "isNull",
   fn: () => {
     defineTable({

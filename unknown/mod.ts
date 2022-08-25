@@ -40,6 +40,20 @@ export function isNumber(value: unknown): value is number {
   return typeof value === "number";
 }
 
+/** Whether the value is `bigint` or not.
+ * @param value - Any value.
+ *
+ * ```ts
+ * import { isBigint } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isBigint(1000n), true)
+ * assertEquals(isBigint(undefined), false)
+ * ```
+ */
+export function isBigint(value: unknown): value is bigint {
+  return typeof value === "bigint";
+}
+
 /** Whether the value is `null` or not.
  * @param value - Any value.
  *
