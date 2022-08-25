@@ -438,3 +438,27 @@ export function isAsyncGenerator<
   return isFunction(obj["next"]) && isFunction(obj["return"]) &&
     isFunction(obj["throw"]);
 }
+
+export type MaybeFalsy =
+  | typeof NaN
+  | 0
+  | -0
+  | 0n
+  | ""
+  | null
+  | undefined
+  | false;
+
+/** Whether the value is {@link MaybeFalsy} or not.
+ *
+ * ```ts
+ * import { isFalsy } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isFalsy(0), true)
+ * assertEquals(isFalsy(""), true)
+ * assertEquals(isFalsy("a"), false)
+ * ```
+ */
+export function isFalsy(value: unknown): value is MaybeFalsy {
+  return !value;
+}

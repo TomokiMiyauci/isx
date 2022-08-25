@@ -9,6 +9,7 @@ import {
   isError,
   isEven,
   isFalse,
+  isFalsy,
   isFunction,
   isHexColor,
   isIterable,
@@ -427,4 +428,18 @@ Deno.test({
       assertEquals(isAsyncGenerator(value), result)
     );
   },
+});
+
+Deno.test("isFalsy", () => {
+  assertEquals(isFalsy(""), true);
+  assertEquals(isFalsy(0), true);
+  assertEquals(isFalsy(-0), true);
+  assertEquals(isFalsy(0n), true);
+  assertEquals(isFalsy(-0n), true);
+  assertEquals(isFalsy(null), true);
+  assertEquals(isFalsy(undefined), true);
+  assertEquals(isFalsy(false), true);
+
+  assertEquals(isFalsy(true), false);
+  assertEquals(isFalsy(1), false);
 });
