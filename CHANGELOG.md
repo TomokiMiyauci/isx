@@ -1,3 +1,13 @@
+# [1.0.0-beta.20](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.19...1.0.0-beta.20) (2022-08-25)
+
+
+### Features
+
+* **number:** add `isNonNegativeInteger` function ([92fa0c5](https://github.com/TomokiMiyauci/isx/commit/92fa0c5b608896aa2de4fe8802cc1f0923987f15))
+* **unknown:** add `isBigint` function ([6286418](https://github.com/TomokiMiyauci/isx/commit/6286418cdfdc92afbf58003e9ff424008e692fe3))
+* **unknown:** add `isFalsy` function ([68c6c28](https://github.com/TomokiMiyauci/isx/commit/68c6c283ac42ba2cdd9dd3792158f20f015f169c))
+* **unknown:** add `isTruty` function ([dfc14a0](https://github.com/TomokiMiyauci/isx/commit/dfc14a0ac8063e76a4ddf1bc8ca61c5ff8d6deb4))
+
 # [1.0.0-beta.19](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.18...1.0.0-beta.19) (2022-08-03)
 
 
