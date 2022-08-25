@@ -462,3 +462,26 @@ export type MaybeFalsy =
 export function isFalsy(value: unknown): value is MaybeFalsy {
   return !value;
 }
+
+export type MaybeTruthy =
+  | Exclude<string, "">
+  | Exclude<number, 0 | -0>
+  | Exclude<bigint, 0n>
+  | symbol
+  | true
+  | object;
+
+/** Whether the value is {@link MaybeTruthy} or not.
+ * @param value - Any value.
+ *
+ * ```ts
+ * import { isTruthy } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * assertEquals(isTruthy(1), true)
+ * assertEquals(isTruthy("a"), true)
+ * assertEquals(isTruthy(0), false)
+ * ```
+ */
+export function isTruthy(value: unknown): value is MaybeTruthy {
+  return !!value;
+}

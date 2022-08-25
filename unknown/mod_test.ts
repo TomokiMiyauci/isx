@@ -26,6 +26,7 @@ import {
   isString,
   isSymbol,
   isTrue,
+  isTruthy,
   isUndefined,
   isValidDate,
 } from "./mod.ts";
@@ -442,4 +443,21 @@ Deno.test("isFalsy", () => {
 
   assertEquals(isFalsy(true), false);
   assertEquals(isFalsy(1), false);
+});
+
+Deno.test("isTruthy", () => {
+  assertEquals(isTruthy(" "), true);
+  assertEquals(isTruthy(1), true);
+  assertEquals(isTruthy(Symbol("")), true);
+  assertEquals(isTruthy(1n), true);
+  assertEquals(isTruthy(true), true);
+  assertEquals(isTruthy({}), true);
+
+  assertEquals(isTruthy(0), false);
+  assertEquals(isTruthy(-0), false);
+  assertEquals(isTruthy(0n), false);
+  assertEquals(isTruthy(""), false);
+  assertEquals(isTruthy(null), false);
+  assertEquals(isTruthy(undefined), false);
+  assertEquals(isTruthy(false), false);
 });
