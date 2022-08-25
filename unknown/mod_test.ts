@@ -1,6 +1,7 @@
 import {
   isAsyncGenerator,
   isAsyncIterable,
+  isBigint,
   isBoolean,
   isDate,
   isDateFormat,
@@ -53,8 +54,8 @@ Deno.test({
   name: "isBigint",
   fn: () =>
     defineTable({
-      "0n": true,
-    }).forEach(([a, b]) => assertEquals(isNumber(a), b)),
+      big1: true,
+    }).forEach(([a, b]) => assertEquals(isBigint(a), b)),
 });
 
 Deno.test({
