@@ -1,55 +1,115 @@
-import { isEven, isNegativeNumber, isOdd, isPositiveNumber } from "./mod.ts";
-import { defineNumberTable } from "../tests/number.ts";
+import {
+  isEven,
+  isNegativeNumber,
+  isNonNegativeInteger,
+  isOdd,
+  isPositiveNumber,
+} from "./mod.ts";
+import { numbers } from "../tests/number.ts";
 import { assertEquals } from "../dev_deps.ts";
 
 Deno.test({
   name: "isOdd",
   fn: () =>
-    defineNumberTable({
-      "-1": true,
-      1: true,
-      "MAX_SAFE_INTEGER": true,
-      "MIN_SAFE_INTEGER": true,
+    numbers({
+      real: {
+        rational: {
+          integer: {
+            negative: true,
+            positive: true,
+          },
+        },
+      },
     }).forEach(
-      ([value, expected]) => assertEquals(isOdd(value), expected),
+      (value) => assertEquals(isOdd(value), true),
     ),
 });
 
 Deno.test({
   name: "isEven",
   fn: () =>
-    defineNumberTable({
-      0: true,
-      "-0": true,
-      "MAX_VALUE": true,
+    numbers({
+      real: {
+        rational: {
+          integer: {
+            zero: true,
+          },
+        },
+      },
     }).forEach(
-      ([value, expected]) =>
-        assertEquals(isEven(value), expected, String(value)),
+      (value) => assertEquals(isEven(value), true, String(value)),
     ),
 });
 
 Deno.test({
   name: "isPositiveNumber",
   fn: () =>
-    defineNumberTable({
-      1: true,
-      MAX_VALUE: true,
-      MIN_VALUE: true,
-      MAX_SAFE_INTEGER: true,
-      EPSILON: true,
+    numbers({
+      real: {
+        rational: {
+          decimal: {
+            "positive": true,
+          },
+          "integer": {
+            "positive": true,
+          },
+        },
+      },
     }).forEach(
-      ([value, expected]) =>
-        assertEquals(isPositiveNumber(value), expected, String(value)),
+      (value) => assertEquals(isPositiveNumber(value), true, String(value)),
     ),
 });
 
 Deno.test({
   name: "isNegativeNumber",
   fn: () =>
-    defineNumberTable({
-      "-1": true,
-      MIN_SAFE_INTEGER: true,
+    numbers({
+      real: {
+        rational: {
+          "decimal": { negative: true },
+
+          "integer": {
+            "negative": true,
+          },
+        },
+      },
     }).forEach(
-      ([value, expected]) => assertEquals(isNegativeNumber(value), expected),
+      (value) => assertEquals(isNegativeNumber(value), true),
     ),
+});
+
+Deno.test({
+  name: "isNegativeNumber",
+  fn: () =>
+    numbers({
+      real: {
+        rational: {
+          "decimal": { negative: true },
+
+          "integer": {
+            "negative": true,
+          },
+        },
+      },
+    }).forEach(
+      (value) => assertEquals(isNegativeNumber(value), true),
+    ),
+});
+
+Deno.test({
+  name: "isNonNegativeInteger",
+  fn: () => {
+    numbers({
+      real: {
+        rational: {
+          "integer": {
+            zero: true,
+            positive: true,
+          },
+        },
+      },
+    }).forEach(
+      (value) => assertEquals(isNonNegativeInteger(value), true),
+    );
+  },
 });

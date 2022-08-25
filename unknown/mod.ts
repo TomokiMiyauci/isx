@@ -3,6 +3,7 @@ import { Primitive } from "../types.ts";
 import {
   isEven as _isEven,
   isNegativeNumber as _isNNegativeNumber,
+  isNonNegativeInteger as _isNonNegativeInteger,
   isOdd as _isOdd,
   isPositiveNumber as _isPositiveNumber,
 } from "../number/mod.ts";
