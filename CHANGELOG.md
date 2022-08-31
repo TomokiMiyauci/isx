@@ -1,3 +1,19 @@
+# [1.0.0-beta.21](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.20...1.0.0-beta.21) (2022-08-31)
+
+
+### Features
+
+* **date:** export `isValidDate` function ([daf77bc](https://github.com/TomokiMiyauci/isx/commit/daf77bca2461879b1f5173ee5c290a400c6f8f4b))
+* export validation for number subset ([670d336](https://github.com/TomokiMiyauci/isx/commit/670d3362416f5839f78537e68386a2da18383f64))
+* **object:** add `hasOwn` function ([3dac147](https://github.com/TomokiMiyauci/isx/commit/3dac147933d05c26d8512038a65ac6aae29ce307))
+* **string:** rename `isHexColor` to `isHexColorFormat` ([a2fe0d6](https://github.com/TomokiMiyauci/isx/commit/a2fe0d655ca07800124af568121eb4e3ae74d882))
+* **strings:** add validation for hostname format ([234e8a2](https://github.com/TomokiMiyauci/isx/commit/234e8a238fc818abab87cd05136e676a1bd3a56b))
+* **strings:** add validation for rfc 3339 date format ([ef1532a](https://github.com/TomokiMiyauci/isx/commit/ef1532af2883d00dcd1a0ea060c1cc3688899a2c))
+* **strings:** add validation for RFC 3339 date time format ([2b675a3](https://github.com/TomokiMiyauci/isx/commit/2b675a318a1f41d9cb56ca8bf65acaee2c695d50))
+* **strings:** add validation for RFC 3339 full-time format ([92b36fb](https://github.com/TomokiMiyauci/isx/commit/92b36fb9c1f5292adb9cd8a815e9633b41dc660f))
+* **unknown:** remove functions with excessive narrowing ([c7a8cb0](https://github.com/TomokiMiyauci/isx/commit/c7a8cb061871fd6d319a3f14b3770e4aca364311))
+* **unknown:** rename Maybe prefix to Like suffix ([c8861ca](https://github.com/TomokiMiyauci/isx/commit/c8861caa94fcba306e297eb0314cd3b4812890d6))
+
 # [1.0.0-beta.20](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.19...1.0.0-beta.20) (2022-08-25)
 
 
