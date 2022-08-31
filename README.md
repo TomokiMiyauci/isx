@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-TypeScript-first validate function collections
+TypeScript-first validate collections for JavaScript data.
 </p>
 
 <div align="center">
@@ -280,7 +280,9 @@ assertEquals(isIterable(""), true);
 assertEquals(isIterable({}), false);
 ```
 
-## Whether the value is `AsyncIterable` or not
+## isAsyncIterable
+
+Whether the value is `AsyncIterable` or not
 
 ```ts
 import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/mod.ts";
@@ -296,11 +298,11 @@ assertEquals(
 assertEquals(isAsyncIterable(() => {}), false);
 ```
 
-### String subsets
+## String subsets
 
 Validates a subset of `string`. All validate functions must satisfy ⊂ `string`.
 
-## isHexColorFormat
+### isHexColorFormat
 
 Whether the value is Hex color or not.
 
@@ -312,7 +314,7 @@ assertEquals(isHexColorFormat("#FFF"), true);
 assertEquals(isHexColorFormat("#ggg"), false);
 ```
 
-### Number subsets
+## Number subsets
 
 Validates a subset of `number`. All validate functions must satisfy ⊂ `number`.
 
