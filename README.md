@@ -372,6 +372,21 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
+## Date subsets
+
+Validates a subset of `Date`. All validate functions must satisfy ⊂ `Date`.
+
+### isValidDate
+
+Whether the value is valid `Date` or not.
+
+```ts
+import { isValidDate } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isValidDate(new Date("2000/1/1")), true);
+assertEquals(isValidDate(new Date("invalid")), false);
+```
+
 ## License
 
 Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).

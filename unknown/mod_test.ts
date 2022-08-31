@@ -6,19 +6,15 @@ import {
   isDate,
   isEmpty,
   isError,
-  isEven,
   isFalse,
   isFalsy,
   isFunction,
   isIterable,
-  isNegativeNumber,
   isNil,
   isNull,
   isNumber,
   isObject,
-  isOdd,
   isPlainObject,
-  isPositiveNumber,
   isPrimitive,
   isPromise,
   isString,
@@ -289,43 +285,6 @@ Deno.test({
       symbol: true,
     }).forEach(([value, expected]) => assertEquals(isSymbol(value), expected));
   },
-});
-
-Deno.test({
-  name: "isOdd",
-  fn: () =>
-    defineTable({
-      1: true,
-      "-1": true,
-    }).forEach(([value, expected]) => assertEquals(isOdd(value), expected)),
-});
-
-Deno.test({
-  name: "isEven",
-  fn: () =>
-    defineTable({
-      0: true,
-    }).forEach(([value, expected]) => assertEquals(isEven(value), expected)),
-});
-
-Deno.test({
-  name: "isPositiveNumber",
-  fn: () =>
-    defineTable({
-      1: true,
-    }).forEach(([value, expected]) =>
-      assertEquals(isPositiveNumber(value), expected)
-    ),
-});
-
-Deno.test({
-  name: "isNegativeNumber",
-  fn: () =>
-    defineTable({
-      "-1": true,
-    }).forEach(([value, expected]) =>
-      assertEquals(isNegativeNumber(value), expected)
-    ),
 });
 
 Deno.test({
