@@ -272,7 +272,8 @@ export function isAsyncIterable<T>(
   return isFunction(Object(value)[Symbol.asyncIterator]);
 }
 
-export type MaybeFalsy =
+/** Types for falsy values. */
+export type FalsyLike =
   | typeof NaN
   | 0
   | -0
@@ -282,7 +283,7 @@ export type MaybeFalsy =
   | undefined
   | false;
 
-/** Whether the value is {@link MaybeFalsy} or not.
+/** Whether the value is {@link FalsyLike} or not.
  *
  * ```ts
  * import { isFalsy } from "https://deno.land/x/isx@$VERSION/mod.ts"
@@ -292,11 +293,12 @@ export type MaybeFalsy =
  * assertEquals(isFalsy("a"), false)
  * ```
  */
-export function isFalsy(value: unknown): value is MaybeFalsy {
+export function isFalsy(value: unknown): value is FalsyLike {
   return !value;
 }
 
-export type MaybeTruthy =
+/** Types for truthy values. */
+export type TruthyLike =
   | Exclude<string, "">
   | Exclude<number, 0 | -0>
   | Exclude<bigint, 0n>
@@ -304,7 +306,7 @@ export type MaybeTruthy =
   | symbol
   | object;
 
-/** Whether the value is {@link MaybeTruthy} or not.
+/** Whether the value is {@link TruthyLike} or not.
  * @param value - Any value.
  *
  * ```ts
@@ -315,6 +317,6 @@ export type MaybeTruthy =
  * assertEquals(isTruthy(0), false)
  * ```
  */
-export function isTruthy(value: unknown): value is MaybeTruthy {
+export function isTruthy(value: unknown): value is TruthyLike {
   return !!value;
 }

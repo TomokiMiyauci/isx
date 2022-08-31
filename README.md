@@ -142,7 +142,7 @@ assertEquals(isSymbol(null), false);
 
 ## isTruthy
 
-Whether the value is `MaybeTruthy` or not.
+Whether the value is `TruthyLike` or not.
 
 ```ts
 import { isTruthy } from "https://deno.land/x/isx@$VERSION/mod.ts";
@@ -156,7 +156,7 @@ assertEquals(isTruthy(0), false);
 > from a type with an infinite subset, such as `string` or `number`.
 
 ```ts
-type MaybeTruthy =
+type TruthyLike =
   | Exclude<string, "">
   | Exclude<number, 0 | -0>
   | Exclude<bigint, 0n>
@@ -167,7 +167,7 @@ type MaybeTruthy =
 
 ## isFalsy
 
-Whether the value is `MaybeFalsy` or not.
+Whether the value is `FalsyLike` or not.
 
 ```ts
 import { isFalsy } from "https://deno.land/x/isx@$VERSION/mod.ts";
@@ -180,7 +180,7 @@ assertEquals(isFalsy("a"), false);
 > `NaN` is not a Unit type, but a `number`.
 
 ```ts
-type MaybeFalsy =
+type FalsyLike =
   | typeof NaN
   | 0
   | -0
