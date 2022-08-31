@@ -28,6 +28,10 @@ export {
   isOdd,
   isPositiveNumber,
 } from "./numbers.ts";
-export { isHexColorFormat } from "./strings.ts";
+export {
+  type DateFormat,
+  isHexColorFormat,
+  isRfc3339DateFormat,
+} from "./strings.ts";
 export { isValidDate } from "./dates.ts";
 export { hasOwn } from "./object.ts";
