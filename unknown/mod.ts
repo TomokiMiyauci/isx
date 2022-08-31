@@ -254,7 +254,8 @@ export function isEmpty(value: unknown): boolean {
  * import { isError } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isError(Error()), true)
- * assertEquals(isError(new SyntaxError()), false)
+ * assertEquals(isError(new SyntaxError()), true)
+ * assertEquals(isError(new Date()), false);
  * ```
  */
 export function isError(value: unknown): value is Error {
@@ -467,8 +468,8 @@ export type MaybeTruthy =
   | Exclude<string, "">
   | Exclude<number, 0 | -0>
   | Exclude<bigint, 0n>
+  | Exclude<boolean, false>
   | symbol
-  | true
   | object;
 
 /** Whether the value is {@link MaybeTruthy} or not.
