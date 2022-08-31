@@ -2,6 +2,12 @@
   "tasks": {
     "test": "deno test --doc"
   },
+  "compilerOptions": {
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true
+  },
   "fmt": {
     "files": {
       "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
