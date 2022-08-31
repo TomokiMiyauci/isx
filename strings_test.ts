@@ -1,5 +1,9 @@
 import { assertEquals } from "./dev_deps.ts";
-import { isHexColorFormat, isRfc3339DateFormat } from "./strings.ts";
+import {
+  isHexColorFormat,
+  isRfc3339DateFormat,
+  isRfc3339TimeFormat,
+} from "./strings.ts";
 
 Deno.test({
   name: "isHexColorFormat",
@@ -73,6 +77,31 @@ Deno.test({
 
     table.forEach(([value, result]) =>
       assertEquals(isRfc3339DateFormat(value), result, value)
+    );
+  },
+});
+
+Deno.test({
+  name: "isRfc3339TimeFormat",
+  fn: () => {
+    const table: [string, boolean][] = [
+      ["", false],
+      ["30:00:00+00:00", false],
+      ["00:60:00+00:00", false],
+      ["24:00:00+00:00", false],
+      ["23:00:60+00:00", false],
+      ["00:00:00$00:00", false],
+      ["00:00:00+20:00", false],
+      ["00:00:00-20:00", false],
+      ["23:59:59z", false],
+
+      ["00:00:00+00:00", true],
+      ["23:59:59+19:59", true],
+      ["23:59:59Z", true],
+    ];
+
+    table.forEach(([value, result]) =>
+      assertEquals(isRfc3339TimeFormat(value), result, value)
     );
   },
 });

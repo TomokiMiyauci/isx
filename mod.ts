@@ -32,6 +32,8 @@ export {
   type DateFormat,
   isHexColorFormat,
   isRfc3339DateFormat,
+  isRfc3339TimeFormat,
+  type TimeFormat,
 } from "./strings.ts";
 export { isValidDate } from "./dates.ts";
 export { hasOwn } from "./object.ts";

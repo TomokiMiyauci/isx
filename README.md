@@ -318,7 +318,7 @@ assertEquals(isHexColorFormat("#ggg"), false);
 
 Whether the value is RFC 3339 date format or not.
 
-The date format compliant with
+The format compliant with
 [RFC 3339, 5.6. Internet Date/Time Format, full-date](https://www.rfc-editor.org/rfc/rfc3339#section-5.6)
 
 ```ts
@@ -326,6 +326,21 @@ import { isRfc3339DateFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
 import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
 assertEquals(isRfc3339DateFormat("0000-01-01"), true);
 assertEquals(isRfc3339DateFormat("0000-00-00"), false);
+```
+
+### isRfc3339TimeFormat
+
+Whether the value is RFC 3339 time format or not.
+
+The format compliant with
+[RFC 3339, 5.6. Internet Date/Time Format, full-date](https://www.rfc-editor.org/rfc/rfc3339#section-5.6)
+
+```ts
+import { isRfc3339TimeFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isRfc3339TimeFormat("00:00:00+00:00"), true);
+assertEquals(isRfc3339TimeFormat("23:59:59Z"), true);
+assertEquals(isRfc3339TimeFormat("24:00:00Z"), false);
 ```
 
 ## Number subsets
