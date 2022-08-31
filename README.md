@@ -372,6 +372,24 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
+## Object subsets
+
+Validates a subset of `object`. All validate functions must satisfy ⊂ `object`.
+
+### hasOwn
+
+Whether the value own the property or not. The difference from `Object.hasOwn`
+is that it has a Type guard.
+
+```ts
+import { hasOwn } from "https://deno.land/x/isx@$VERSION/mod.ts";
+
+const object: object = {};
+if (hasOwn("", object)) {
+  object[""]; // No type error.
+}
+```
+
 ## Date subsets
 
 Validates a subset of `Date`. All validate functions must satisfy ⊂ `Date`.
