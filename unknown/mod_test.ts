@@ -4,14 +4,12 @@ import {
   isBigint,
   isBoolean,
   isDate,
-  isDateFormat,
   isEmpty,
   isError,
   isEven,
   isFalse,
   isFalsy,
   isFunction,
-  isHexColor,
   isIterable,
   isNegativeNumber,
   isNil,
@@ -28,7 +26,6 @@ import {
   isTrue,
   isTruthy,
   isUndefined,
-  isValidDate,
 } from "./mod.ts";
 import { defineTable } from "../tests/data.ts";
 import { assertEquals } from "../dev_deps.ts";
@@ -328,32 +325,6 @@ Deno.test({
       "-1": true,
     }).forEach(([value, expected]) =>
       assertEquals(isNegativeNumber(value), expected)
-    ),
-});
-
-Deno.test({
-  name: "isDateFormat",
-  fn: () =>
-    defineTable({}).forEach(([value, expected]) =>
-      assertEquals(isDateFormat(value), expected)
-    ),
-});
-
-Deno.test({
-  name: "isHexColor",
-  fn: () =>
-    defineTable({}).forEach(([value, expected]) =>
-      assertEquals(isHexColor(value), expected)
-    ),
-});
-
-Deno.test({
-  name: "isValidDate",
-  fn: () =>
-    defineTable({
-      date: true,
-    }).forEach(([value, expected]) =>
-      assertEquals(isValidDate(value), expected)
     ),
 });
 

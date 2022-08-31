@@ -305,11 +305,71 @@ Validates a subset of `string`. All validate functions must satisfy ⊂ `string`
 Whether the value is Hex color or not.
 
 ```ts
-import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/string/mod.ts";
+import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
 import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
 assertEquals(isHexColorFormat("#000000"), true);
 assertEquals(isHexColorFormat("#FFF"), true);
 assertEquals(isHexColorFormat("#ggg"), false);
+```
+
+### Number subsets
+
+Validates a subset of `number`. All validate functions must satisfy ⊂ `number`.
+
+### isOdd
+
+Whether the value is odd or not.
+
+```ts
+import { isOdd } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isOdd(1), true);
+assertEquals(isOdd(0), false);
+```
+
+### isEven
+
+Whether the value is even or not.
+
+```ts
+import { isEven } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isEven(0), true);
+assertEquals(isEven(1), false);
+```
+
+### isPositiveNumber
+
+Whether the value is positive number or not.
+
+```ts
+import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isPositiveNumber(1), true);
+assertEquals(isPositiveNumber(0), false);
+```
+
+### isNegativeNumber
+
+Whether the value is negative number or not.
+
+```ts
+import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isNegativeNumber(-1), true);
+assertEquals(isNegativeNumber(0), false);
+```
+
+### isNonNegativeInteger
+
+Whether the value is non negative integer or not.
+
+```ts
+import { isNonNegativeInteger } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isNonNegativeInteger(0), true);
+assertEquals(isNonNegativeInteger(1.0), true);
+assertEquals(isNonNegativeInteger(-1), false);
 ```
 
 ## License

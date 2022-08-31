@@ -7,10 +7,6 @@ import {
   isOdd as _isOdd,
   isPositiveNumber as _isPositiveNumber,
 } from "../number/mod.ts";
-import {
-  isDateFormat as _isDateFormat,
-  isHexColor as _isHexColor,
-} from "../string/mod.ts";
 import { isValidDate as _isValidDate } from "../date/mod.ts";
 
 /** Whether the value is `string` or not.
@@ -288,106 +284,6 @@ export function isPrimitive(value: unknown): value is Primitive {
  */
 export function isPromise<T>(value: unknown): value is Promise<T> {
   return value instanceof Promise;
-}
-
-/** Whether the value is odd or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isOdd } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isOdd(1), true)
- * assertEquals(isOdd(0), false)
- * ```
- */
-export function isOdd(value: unknown): value is number {
-  return isNumber(value) && _isOdd(value);
-}
-
-/** Whether the value is even or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isEven } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isEven(0), true)
- * assertEquals(isEven(1), false)
- * ```
- */
-export function isEven(value: unknown): value is number {
-  return isNumber(value) && _isEven(value);
-}
-
-/** Whether the value is positive number or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isPositiveNumber(1), true)
- * assertEquals(isPositiveNumber(0), false)
- * ```
- */
-export function isPositiveNumber(value: unknown): value is number {
-  return isNumber(value) && _isPositiveNumber(value);
-}
-
-/** Whether the value is negative number or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isNegativeNumber(-1), true)
- * assertEquals(isNegativeNumber(0), false)
- * ```
- */
-export function isNegativeNumber(value: unknown): value is number {
-  return isNumber(value) && _isNNegativeNumber(value);
-}
-
-/** Whether the value is Date format or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isDateFormat } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isDateFormat("2021-12-31T15:00:00.000Z"), true)
- * assertEquals(isDateFormat("2022/1/1"), true)
- * assertEquals(isDateFormat("invalid date"), false)
- * ```
- */
-export function isDateFormat(value: unknown): value is string {
-  return isString(value) && _isDateFormat(value);
-}
-
-/** Whether the value is Hex color or not.
- * @param value - Any `string`.
- *
- * ```ts
- * import { isHexColor } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isHexColor("#000000"), true)
- * assertEquals(isHexColor("#FFF"), true)
- * assertEquals(isHexColor("#ggg"), false)
- * ```
- */
-export function isHexColor(value: unknown): boolean {
-  return isString(value) && _isHexColor(value);
-}
-
-/** Whether the value is valid `Date` or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isValidDate } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isValidDate(new Date("2000/1/1")), true)
- * assertEquals(isValidDate(new Date("invalid")), false)
- * ```
- */
-export function isValidDate(value: unknown): value is Date {
-  return isDate(value) && _isValidDate(value);
 }
 
 /** Whether the value is `AsyncIterable` or not.
