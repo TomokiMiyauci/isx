@@ -1,28 +1,14 @@
-/** Whether the value is Date format or not.
- * @param value - Any `string`.
- * ```ts
- * import { isDateFormat } from "https://deno.land/x/isx@$VERSION/string/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isDateFormat("2021-12-31T15:00:00.000Z"), true)
- * assertEquals(isDateFormat("2022/1/1"), true)
- * assertEquals(isDateFormat("invalid date"), false)
- * ```
- */
-export function isDateFormat(value: string): boolean {
-  return !isNaN(Date.parse(value));
-}
-
 /** Whether the value is Hex color or not.
  * @param value - Any `string`.
  * ```ts
- * import { isHexColor } from "https://deno.land/x/isx@$VERSION/string/mod.ts"
+ * import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/string/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isHexColor("#000000"), true)
- * assertEquals(isHexColor("#FFF"), true)
- * assertEquals(isHexColor("#ggg"), false)
+ * assertEquals(isHexColorFormat("#000000"), true)
+ * assertEquals(isHexColorFormat("#FFF"), true)
+ * assertEquals(isHexColorFormat("#ggg"), false)
  * ```
  */
-export function isHexColor(value: string): boolean {
+export function isHexColorFormat(value: string): boolean {
   const hex3 = /^#[a-f\d]{3}$/i;
   const hex6 = /^#[a-f\d]{6}$/i;
 

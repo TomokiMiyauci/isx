@@ -1,21 +1,8 @@
 import { assertEquals } from "../dev_deps.ts";
-import { isDateFormat, isHexColor } from "./mod.ts";
-import { defineStringTable } from "../tests/string.ts";
+import { isHexColorFormat } from "./mod.ts";
 
 Deno.test({
-  name: "isDateFormat",
-  fn: () => {
-    defineStringTable({
-      "Date string": true,
-      "ISO 8601": true,
-      "YYYYMMDD hhmmss": true,
-      "YYYYMMDD": true,
-    }).forEach(([key, value]) => assertEquals(isDateFormat(key), value, key));
-  },
-});
-
-Deno.test({
-  name: "isHexColor",
+  name: "isHexColorFormat",
   fn: () => {
     const table: [string, boolean][] = [
       ["#000000", true],
@@ -43,7 +30,7 @@ Deno.test({
     ];
 
     table.forEach(([value, result]) =>
-      assertEquals(isHexColor(value), result, value)
+      assertEquals(isHexColorFormat(value), result, value)
     );
   },
 });

@@ -296,6 +296,22 @@ assertEquals(
 assertEquals(isAsyncIterable(() => {}), false);
 ```
 
+### String subsets
+
+Validates a subset of `string`. All validate functions must satisfy ⊂ `string`.
+
+## isHexColorFormat
+
+Whether the value is Hex color or not.
+
+```ts
+import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/string/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isHexColorFormat("#000000"), true);
+assertEquals(isHexColorFormat("#FFF"), true);
+assertEquals(isHexColorFormat("#ggg"), false);
+```
+
 ## License
 
 Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
