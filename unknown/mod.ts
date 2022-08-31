@@ -164,22 +164,6 @@ export function isObject(value: unknown): value is object {
   return typeof value === "object" && !isNull(value);
 }
 
-/** Whether the value is Plain(literal) object or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isPlainObject } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isPlainObject({}), true)
- * assertEquals(isPlainObject([]), false)
- * ```
- */
-export function isPlainObject(
-  value: unknown,
-): value is Record<PropertyKey, unknown> {
-  return isObject(value) && value.constructor === Object;
-}
-
 /** Whether the value is `symbol` or not.
  * @param value - Any value.
  *
@@ -220,27 +204,6 @@ export function isDate(value: unknown): value is Date {
  */
 export function isIterable<T>(value: unknown): value is Iterable<T> {
   return isFunction(Object(value)[Symbol.iterator]);
-}
-
-/** Whether the value is empty or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isEmpty } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isEmpty(""), true)
- * assertEquals(isEmpty([]), true)
- * assertEquals(isEmpty({}), true)
- * assertEquals(isEmpty({ a: "b" }), false)
- * ```
- */
-export function isEmpty(value: unknown): boolean {
-  if (isIterable(value)) {
-    return !!value[Symbol.iterator]().next().done;
-  }
-
-  return isObject(value) && !Object.getOwnPropertyNames(value).length &&
-    !Object.getOwnPropertySymbols(value).length;
 }
 
 /** Whether the value is `Error` or not.
@@ -307,33 +270,6 @@ export function isAsyncIterable<T>(
   value: unknown,
 ): value is AsyncIterable<T> {
   return isFunction(Object(value)[Symbol.asyncIterator]);
-}
-
-/** Whether the value is `AsyncGenerator` or not.
- * @param value - Any value.
- *
- * ```ts
- * import { isAsyncGenerator } from "https://deno.land/x/isx@$VERSION/mod.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * async function* asyncGenerator() {}
- * assertEquals(
- *   isAsyncGenerator(asyncGenerator()),
- *   true,
- * );
- * assertEquals(isAsyncGenerator({async [Symbol.asyncIterator]() {}}), false);
- * ```
- */
-export function isAsyncGenerator<
-  T = unknown,
-  TReturn = unknown,
-  TNext = unknown,
->(
-  value: unknown,
-): value is AsyncGenerator<T, TReturn, TNext> {
-  if (!isAsyncIterable(value)) return false;
-  const obj = Object(value);
-  return isFunction(obj["next"]) && isFunction(obj["return"]) &&
-    isFunction(obj["throw"]);
 }
 
 export type MaybeFalsy =

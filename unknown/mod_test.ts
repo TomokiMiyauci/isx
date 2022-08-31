@@ -1,10 +1,8 @@
 import {
-  isAsyncGenerator,
   isAsyncIterable,
   isBigint,
   isBoolean,
   isDate,
-  isEmpty,
   isError,
   isFalse,
   isFalsy,
@@ -14,7 +12,6 @@ import {
   isNull,
   isNumber,
   isObject,
-  isPlainObject,
   isPrimitive,
   isPromise,
   isString,
@@ -137,18 +134,6 @@ Deno.test({
 });
 
 Deno.test({
-  name: "isPlainObject",
-  fn: () => {
-    defineTable({
-      "{}": true,
-      "{{}}": true,
-    }).forEach(([value, expected]) =>
-      assertEquals(isPlainObject(value), expected)
-    );
-  },
-});
-
-Deno.test({
   name: "isDate",
   fn: () => {
     defineTable({
@@ -187,56 +172,6 @@ Deno.test({
     ];
 
     table.forEach(([value, result]) => assertEquals(isIterable(value), result));
-  },
-});
-
-Deno.test({
-  name: "isEmpty",
-  fn: () => {
-    const table: [
-      ...Parameters<typeof isEmpty>,
-      ReturnType<typeof isEmpty>,
-    ][] = [
-      [false, false],
-      [{ a: "" }, false],
-      [{ [Symbol.for("test")]: 1 }, false],
-      [[1], false],
-      [[, , 1], false],
-      [new Array(1), false],
-      [new Array(1).fill(1), false],
-      ["a", false],
-      [" ", false],
-      [new Set([1]), false],
-      [[], true],
-      [new Array(0).fill(1), true],
-      [new Array(0), true],
-      ["", true],
-      [{}, true],
-      [new Set(), true],
-      [new Map(), true],
-      [new Map([[1, 2]]), false],
-      [new Set(), true],
-      [new Int8Array(), true],
-      [new Int8Array(1), false],
-      [new Uint8Array(), true],
-      [new Uint8Array(1), false],
-      [new Uint8ClampedArray(), true],
-      [new Uint8ClampedArray(1), false],
-      [new Int16Array(), true],
-      [new Int16Array(1), false],
-      [new Uint16Array(), true],
-      [new Uint16Array(1), false],
-      [new Int32Array(), true],
-      [new Int32Array(1), false],
-      [new Uint32Array(), true],
-      [new Uint32Array(1), false],
-      [new Float32Array(), true],
-      [new Float32Array(1), false],
-      [new Float64Array(), true],
-      [new Float64Array(1), false],
-    ];
-
-    table.forEach(([value, result]) => assertEquals(isEmpty(value), result));
   },
 });
 
@@ -293,8 +228,8 @@ Deno.test({
     async function* asyncGen() {}
 
     const table: [
-      ...Parameters<typeof isAsyncGenerator>,
-      ReturnType<typeof isAsyncGenerator>,
+      ...Parameters<typeof isAsyncIterable>,
+      ReturnType<typeof isAsyncIterable>,
     ][] = [
       [false, false],
       [{}, false],
@@ -317,46 +252,6 @@ Deno.test({
 
     table.forEach(([value, result]) =>
       assertEquals(isAsyncIterable(value), result)
-    );
-  },
-});
-
-Deno.test({
-  name: "isAsyncGenerator",
-  fn: () => {
-    async function* asyncGen() {}
-
-    const table: [
-      ...Parameters<typeof isAsyncGenerator>,
-      ReturnType<typeof isAsyncGenerator>,
-    ][] = [
-      [false, false],
-      [{}, false],
-      [[], false],
-      ["", false],
-      [{
-        async *[Symbol.asyncIterator]() {},
-      }, false],
-      [{
-        [Symbol.asyncIterator]: 1,
-      }, false],
-      [{
-        async [Symbol.asyncIterator]() {},
-        next: () => {},
-        return: () => {},
-        throw: undefined,
-      }, false],
-      [{
-        async [Symbol.asyncIterator]() {},
-        next: () => {},
-        return: () => {},
-        throw: () => {},
-      }, true],
-      [asyncGen(), true],
-    ];
-
-    table.forEach(([value, result]) =>
-      assertEquals(isAsyncGenerator(value), result)
     );
   },
 });
