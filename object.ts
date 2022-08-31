@@ -13,7 +13,6 @@
  * }
  * ```
  */
-// deno-lint-ignore ban-types
 export function hasOwn<T extends PropertyKey, U extends object>(
   key: T,
   value: U,

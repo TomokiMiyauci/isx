@@ -16,6 +16,9 @@
   "lint": {
     "files": {
       "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
+    },
+    "rules": {
+      "exclude": ["ban-types"]
     }
   },
   "test": {
