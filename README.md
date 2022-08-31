@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">validate.js</h1>
+  <h1 align="center">isx</h1>
 </p>
 
 <p align="center">
@@ -8,38 +8,22 @@ TypeScript-first validate collections for JavaScript data.
 
 <div align="center">
 
-[![test](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yml/badge.svg)](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yml)
-[![GitHub release](https://img.shields.io/github/release/TomokiMiyauci/isx.svg)](https://github.com/TomokiMiyauci/isx/releases)
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/isx)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/isx/mod.ts)
-![npm download](https://img.shields.io/npm/dw/isxx?color=blue)
-
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/TomokiMiyauci/isx)
-[![dependencies Status](https://status.david-dm.org/gh/TomokiMiyauci/isx.svg)](https://david-dm.org/TomokiMiyauci/isx)
-[![codecov](https://codecov.io/gh/TomokiMiyauci/isx/branch/main/graph/badge.svg?token=SPAi5Pv2wd)](https://codecov.io/gh/TomokiMiyauci/isx)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f43b1c317e11445399d85ce6efc06504)](https://www.codacy.com/gh/TomokiMiyauci/isx/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TomokiMiyauci/isx&utm_campaign=Badge_Grade)
-![npm type definitions](https://img.shields.io/npm/types/lauqe)
-![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
-![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)
-![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 </div>
 
 ## What
 
-This is a very small collection of validate functions.
-
-Some of them contain wrappers for `typeof` statements, which may be used to
-reduce the number of repeated expressions and thus reduce the bundle size.
-
-The validate function provides a custom type guard whenever it can.
+This is a very small collection of validate functions. The validate function
+provides a custom type guard whenever it can.
 
 ## Naming rule
 
 The validate function is provided according to the following naming conventions
 
 - monadic - is`X`
-- dyadic - equals`X`
 
 ## isString
 

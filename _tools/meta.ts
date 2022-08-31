@@ -31,7 +31,8 @@ export const makeOptions = (version: string): BuildOptions => ({
     },
     keywords: [
       "is",
-      "function",
+      "validate",
+      "validation",
       "utility",
       "collection",
     ],
