@@ -30,8 +30,10 @@ export {
 } from "./numbers.ts";
 export {
   type DateFormat,
+  type DateTimeFormat,
   isHexColorFormat,
   isRfc3339DateFormat,
+  isRfc3339DateTimeFormat,
   isRfc3339TimeFormat,
   type TimeFormat,
 } from "./strings.ts";

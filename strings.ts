@@ -34,6 +34,9 @@ export type DateFormat = `${DateFullyear}-${DateMonth}-${DateMday}`;
 /** Types for time format. */
 export type TimeFormat = `${PartialType}${TimeOffset}`;
 
+/** Types for date time format. */
+export type DateTimeFormat = `${DateFormat}T${TimeFormat}`;
+
 const FULL_DATE =
   "(?:\\d{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)";
 
@@ -51,8 +54,10 @@ export function isRfc3339DateFormat(value: string): value is DateFormat {
   return new RegExp(`^${FULL_DATE}$`).test(value);
 }
 
-const ReFullTime =
+const FULL_TIME =
   "(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:Z|[+-][01]\\d:[0-5]\\d)";
+
+const DATE_TIME = `${FULL_DATE}T${FULL_TIME}`;
 
 /** Whether the value is RFC 3339 time format or not.
  * The format compliant with {@link https://www.rfc-editor.org/rfc/rfc3339#section-5.6 RFC 3339, 5.6. Internet Date/Time Format, full-time}
@@ -66,5 +71,22 @@ const ReFullTime =
  * ```
  */
 export function isRfc3339TimeFormat(value: string): value is TimeFormat {
-  return new RegExp(`^${ReFullTime}$`).test(value);
+  return new RegExp(`^${FULL_TIME}$`).test(value);
+}
+
+/** Whether the value is RFC 3339 date time format or not.
+ * The format compliant with {@link https://www.rfc-editor.org/rfc/rfc3339#section-5.6 RFC 3339, 5.6. Internet Date/Time Format, date-time}
+ *
+ * ```ts
+ * import { isRfc3339DateTimeFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * assertEquals(isRfc3339DateTimeFormat("0001-01-01T00:00:00Z"), true);
+ * assertEquals(isRfc3339DateTimeFormat("9999-12-31T23:59:59+19:59"), true);
+ * assertEquals(isRfc3339DateTimeFormat("0000-00-00T00:00:00Z"), false);
+ * ```
+ */
+export function isRfc3339DateTimeFormat(
+  value: string,
+): value is DateTimeFormat {
+  return new RegExp(`^${DATE_TIME}$`).test(value);
 }
