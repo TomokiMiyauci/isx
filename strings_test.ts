@@ -1,6 +1,7 @@
 import { assertEquals } from "./dev_deps.ts";
 import {
   isHexColorFormat,
+  isHostnameFormat,
   isRfc3339DateFormat,
   isRfc3339DateTimeFormat,
   isRfc3339TimeFormat,
@@ -36,6 +37,35 @@ Deno.test({
 
     table.forEach(([value, result]) =>
       assertEquals(isHexColorFormat(value), result, value)
+    );
+  },
+});
+
+Deno.test({
+  name: "isHostnameFormat",
+  fn: () => {
+    const table: [string, boolean][] = [
+      ["", false],
+      ["a.", false],
+      ["a.".repeat(64), false],
+      ["a.".repeat(63) + "." + "a".repeat(64), false],
+      ["a..", false],
+      [".", false],
+      ["..", false],
+      ["a.a.", false],
+      ["a.a.a.", false],
+      ["a.a.a.a.", false],
+
+      ["a", true],
+      ["a.a", true],
+      ["a.a.a", true],
+      ["a.a.a.a", true],
+      ["a".repeat(63), true],
+      ["a".repeat(63) + "." + "a".repeat(63), true],
+    ];
+
+    table.forEach(([value, result]) =>
+      assertEquals(isHostnameFormat(value), result, value)
     );
   },
 });

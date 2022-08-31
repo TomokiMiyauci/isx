@@ -314,6 +314,18 @@ assertEquals(isHexColorFormat("#FFF"), true);
 assertEquals(isHexColorFormat("#ggg"), false);
 ```
 
+### isHostnameFormat
+
+Whether the value is hostname format or not.
+
+```ts
+import { isHostnameFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isHostnameFormat("a"), true);
+assertEquals(isHostnameFormat("test.test"), true);
+assertEquals(isHostnameFormat("."), false);
+```
+
 ### isRfc3339DateFormat
 
 Whether the value is RFC 3339 date format or not.

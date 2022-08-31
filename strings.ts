@@ -15,15 +15,30 @@ export function isHexColorFormat(value: string): boolean {
   return hex3.test(value) || hex6.test(value);
 }
 
+/** @see https://stackoverflow.com/questions/106179/regular-expression-to-match-dns-hostname-or-ip-address */
+const ReHostname =
+  /^[a-z\d]([a-z\d\-]{0,61}[a-z\d])?(\.[a-z\d]([a-z\d\-]{0,61}[a-z\d])?)*$/i;
+
+/** Whether the value is hostname format or not.
+ *
+ * ```ts
+ * import { isHostnameFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * assertEquals(isHostnameFormat("a"), true);
+ * assertEquals(isHostnameFormat("test.test"), true);
+ * assertEquals(isHostnameFormat("."), false);
+ * ```
+ */
+export function isHostnameFormat(value: string): boolean {
+  return ReHostname.test(value);
+}
+
 type TimeHour = string;
 type TimeMinute = string;
 type TimeSecond = string;
-
 type TimeNumoffset = `${"+" | "-"}${TimeHour}:${TimeMinute}`;
 type TimeOffset = "Z" | TimeNumoffset;
-
 type PartialType = `${TimeHour}:${TimeMinute}:${TimeSecond}`;
-
 type DateFullyear = string;
 type DateMonth = string;
 type DateMday = string;

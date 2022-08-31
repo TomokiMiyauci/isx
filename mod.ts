@@ -32,6 +32,7 @@ export {
   type DateFormat,
   type DateTimeFormat,
   isHexColorFormat,
+  isHostnameFormat,
   isRfc3339DateFormat,
   isRfc3339DateTimeFormat,
   isRfc3339TimeFormat,
