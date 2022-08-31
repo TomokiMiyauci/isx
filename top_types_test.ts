@@ -8,8 +8,8 @@ import {
   isFalsy,
   isFunction,
   isIterable,
-  isNil,
   isNull,
+  isNullable,
   isNumber,
   isObject,
   isPrimitive,
@@ -19,9 +19,9 @@ import {
   isTrue,
   isTruthy,
   isUndefined,
-} from "./mod.ts";
-import { defineTable } from "../tests/data.ts";
-import { assertEquals } from "../dev_deps.ts";
+} from "./top_types.ts";
+import { defineTable } from "./tests/data.ts";
+import { assertEquals } from "./dev_deps.ts";
 
 Deno.test({
   name: "isString",
@@ -85,12 +85,12 @@ Deno.test({
 });
 
 Deno.test({
-  name: "isNil",
+  name: "isNullable",
   fn: () => {
     defineTable({
       null: true,
       undefined: true,
-    }).forEach(([a, b]) => assertEquals(isNil(a), b));
+    }).forEach(([a, b]) => assertEquals(isNullable(a), b));
   },
 });
 

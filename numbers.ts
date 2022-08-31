@@ -2,7 +2,7 @@
  * @param value - Any `number`.
  *
  * ```ts
- * import { isOdd } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
+ * import { isOdd } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isOdd(1), true)
  * assertEquals(isOdd(0), false)
@@ -16,7 +16,7 @@ export function isOdd(value: number): boolean {
  * @param value - Any `number`.
  *
  * ```ts
- * import { isEven } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
+ * import { isEven } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isEven(0), true)
  * assertEquals(isEven(1), false)
@@ -30,7 +30,7 @@ export function isEven(value: number): boolean {
  * @param value - Any `number`.
  *
  * ```ts
- * import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
+ * import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isPositiveNumber(1), true)
  * assertEquals(isPositiveNumber(0), false)
@@ -44,7 +44,7 @@ export function isPositiveNumber(value: number): boolean {
  * @param value - Any `number`.
  *
  * ```ts
- * import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
+ * import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isNegativeNumber(-1), true)
  * assertEquals(isNegativeNumber(0), false)
@@ -58,7 +58,7 @@ export function isNegativeNumber(value: number): boolean {
  * @param value - Any `number`.
  *
  * ```ts
- * import { isNonNegativeInteger } from "https://deno.land/x/isx@$VERSION/number/mod.ts"
+ * import { isNonNegativeInteger } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isNonNegativeInteger(0), true)
  * assertEquals(isNonNegativeInteger(1.0), true)

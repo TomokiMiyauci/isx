@@ -1,5 +1,5 @@
-import { assertEquals } from "../dev_deps.ts";
-import { isHexColorFormat } from "./mod.ts";
+import { assertEquals } from "./dev_deps.ts";
+import { isHexColorFormat } from "./strings.ts";
 
 Deno.test({
   name: "isHexColorFormat",

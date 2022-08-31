@@ -4,9 +4,9 @@ import {
   isNonNegativeInteger,
   isOdd,
   isPositiveNumber,
-} from "./mod.ts";
-import { numbers } from "../tests/number.ts";
-import { assertEquals } from "../dev_deps.ts";
+} from "./numbers.ts";
+import { numbers } from "./tests/number.ts";
+import { assertEquals } from "./dev_deps.ts";
 
 Deno.test({
   name: "isOdd",

@@ -100,14 +100,14 @@
 
 ### Bug Fixes
 
-* export `isNil` function globaly ([cbf5536](https://github.com/TomokiMiyauci/isx/commit/cbf5536ccae85ac0188bdd31630231ee5da1b9b0))
+* export `isNullable` function globaly ([cbf5536](https://github.com/TomokiMiyauci/isx/commit/cbf5536ccae85ac0188bdd31630231ee5da1b9b0))
 
 # [1.0.0-beta.9](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2021-11-19)
 
 
 ### Features
 
-* add `isNil` function ([ecff67f](https://github.com/TomokiMiyauci/isx/commit/ecff67f10c21dd85a33bfe9430177f881b308501))
+* add `isNullable` function ([ecff67f](https://github.com/TomokiMiyauci/isx/commit/ecff67f10c21dd85a33bfe9430177f881b308501))
 
 # [1.0.0-beta.8](https://github.com/TomokiMiyauci/isx/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2021-11-19)
 

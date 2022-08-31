@@ -1,14 +1,3 @@
-// deno-lint-ignore-file ban-types
-import { Primitive } from "../types.ts";
-import {
-  isEven as _isEven,
-  isNegativeNumber as _isNNegativeNumber,
-  isNonNegativeInteger as _isNonNegativeInteger,
-  isOdd as _isOdd,
-  isPositiveNumber as _isPositiveNumber,
-} from "../number/mod.ts";
-import { isValidDate as _isValidDate } from "../date/mod.ts";
-
 /** Whether the value is `string` or not.
  * @param value - Any value.
  *
@@ -121,18 +110,18 @@ export function isBoolean(value: unknown): value is boolean {
   return typeof value === "boolean";
 }
 
-/** Whether the value is nill or not.
+/** Whether the value is `null` or `undefined` or not.
  * @param value - Any value.
  *
  * ```ts
- * import { isNil } from "https://deno.land/x/isx@$VERSION/mod.ts"
+ * import { isNullable } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
- * assertEquals(isNil(null), true)
- * assertEquals(isNil(undefined), true)
- * assertEquals(isNil({}), false)
+ * assertEquals(isNullable(null), true)
+ * assertEquals(isNullable(undefined), true)
+ * assertEquals(isNullable({}), false)
  * ```
  */
-export function isNil(value: unknown): value is null | undefined {
+export function isNullable(value: unknown): value is null | undefined {
   return isNull(value) || isUndefined(value);
 }
 
@@ -220,6 +209,16 @@ export function isIterable<T>(value: unknown): value is Iterable<T> {
 export function isError(value: unknown): value is Error {
   return value instanceof Error;
 }
+
+/** Types for Primitive value. */
+export type Primitive =
+  | number
+  | string
+  | boolean
+  | bigint
+  | undefined
+  | null
+  | symbol;
 
 /** Whether the value is {@link Primitive} or not.
  * @param value - Any value.

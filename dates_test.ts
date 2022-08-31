@@ -1,6 +1,6 @@
-import { isValidDate } from "./mod.ts";
-import { defineDateTable } from "../tests/date.ts";
-import { assertEquals } from "../dev_deps.ts";
+import { isValidDate } from "./dates.ts";
+import { defineDateTable } from "./tests/date.ts";
+import { assertEquals } from "./dev_deps.ts";
 
 Deno.test({
   name: "isValidDate",

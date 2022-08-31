@@ -1,7 +1,7 @@
 /** Whether the value is Hex color or not.
  * @param value - Any `string`.
  * ```ts
- * import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/string/mod.ts"
+ * import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isHexColorFormat("#000000"), true)
  * assertEquals(isHexColorFormat("#FFF"), true)

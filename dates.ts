@@ -2,7 +2,7 @@
  * @param value - Any `Date`
  * .
  * ```ts
- * import { isValidDate } from "https://deno.land/x/isx@$VERSION/date/mod.ts"
+ * import { isValidDate } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
  * assertEquals(isValidDate(new Date("2000/1/1")), true)
  * assertEquals(isValidDate(new Date("invalid")), false)

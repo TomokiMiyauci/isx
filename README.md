@@ -334,7 +334,7 @@ assertEquals(isOdd(0), false);
 Whether the value is even or not.
 
 ```ts
-import { isEven } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { isEven } from "https://deno.land/x/isx@$VERSION/mod.ts";
 import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
 assertEquals(isEven(0), true);
 assertEquals(isEven(1), false);
@@ -345,7 +345,7 @@ assertEquals(isEven(1), false);
 Whether the value is positive number or not.
 
 ```ts
-import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts";
 import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
 assertEquals(isPositiveNumber(1), true);
 assertEquals(isPositiveNumber(0), false);
@@ -356,7 +356,7 @@ assertEquals(isPositiveNumber(0), false);
 Whether the value is negative number or not.
 
 ```ts
-import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/mod.ts";
 import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
 assertEquals(isNegativeNumber(-1), true);
 assertEquals(isNegativeNumber(0), false);
@@ -367,7 +367,7 @@ assertEquals(isNegativeNumber(0), false);
 Whether the value is non negative integer or not.
 
 ```ts
-import { isNonNegativeInteger } from "https://deno.land/x/isx@$VERSION/number/mod.ts";
+import { isNonNegativeInteger } from "https://deno.land/x/isx@$VERSION/mod.ts";
 import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
 assertEquals(isNonNegativeInteger(0), true);
 assertEquals(isNonNegativeInteger(1.0), true);
