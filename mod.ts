@@ -14,6 +14,7 @@ export {
   isObject,
   isPrimitive,
   isPromise,
+  isRegExp,
   isString,
   isSymbol,
   isTrue,
