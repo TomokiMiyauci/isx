@@ -14,6 +14,7 @@ import {
   isObject,
   isPrimitive,
   isPromise,
+  isRegExp,
   isString,
   isSymbol,
   isTrue,
@@ -285,4 +286,9 @@ Deno.test("isTruthy", () => {
   assertEquals(isTruthy(null), false);
   assertEquals(isTruthy(undefined), false);
   assertEquals(isTruthy(false), false);
+});
+
+Deno.test("isRegExp", () => {
+  assertEquals(isRegExp(new RegExp("")), true);
+  assertEquals(isRegExp({}), false);
 });

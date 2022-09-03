@@ -266,7 +266,7 @@ assertEquals(isIterable({}), false);
 
 ## isAsyncIterable
 
-Whether the value is `AsyncIterable` or not
+Whether the value is `AsyncIterable` or not.
 
 ```ts
 import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/mod.ts";
@@ -280,6 +280,17 @@ assertEquals(
   true,
 );
 assertEquals(isAsyncIterable(() => {}), false);
+```
+
+## isRegExp
+
+Whether the value is `RegExp` of not.
+
+```ts
+import { isRegExp } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isRegExp(new RegExp("")), true);
+assertEquals(isRegExp({}), false);
 ```
 
 ## String subsets

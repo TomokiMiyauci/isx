@@ -319,3 +319,16 @@ export type TruthyLike =
 export function isTruthy(value: unknown): value is TruthyLike {
   return !!value;
 }
+
+/** Whether the value is `RegExp` of not.
+ *
+ * ```ts
+ * import { isRegExp } from "https://deno.land/x/isx@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * assertEquals(isRegExp(new RegExp("")), true);
+ * assertEquals(isRegExp({}), false);
+ * ```
+ */
+export function isRegExp(value: unknown): value is RegExp {
+  return value instanceof RegExp;
+}
