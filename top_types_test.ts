@@ -3,6 +3,7 @@ import {
   isBigint,
   isBoolean,
   isDate,
+  isEmptyObject,
   isError,
   isFalse,
   isFalsy,
@@ -291,4 +292,13 @@ Deno.test("isTruthy", () => {
 Deno.test("isRegExp", () => {
   assertEquals(isRegExp(new RegExp("")), true);
   assertEquals(isRegExp({}), false);
+});
+
+Deno.test("isEmptyObject", () => {
+  assertEquals(isEmptyObject({}), true);
+  assertEquals(isEmptyObject(new Object()), true);
+  assertEquals(isEmptyObject({ a: "b" }), false);
+  assertEquals(isEmptyObject({ "": "" }), false);
+  assertEquals(isEmptyObject({ [Symbol("")]: "" }), false);
+  assertEquals(isEmptyObject([]), false);
 });

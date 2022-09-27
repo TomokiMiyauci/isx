@@ -3,6 +3,7 @@ export {
   isBigint,
   isBoolean,
   isDate,
+  isEmptyObject,
   isError,
   isFalse,
   isFalsy,

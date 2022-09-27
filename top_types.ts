@@ -332,3 +332,18 @@ export function isTruthy(value: unknown): value is TruthyLike {
 export function isRegExp(value: unknown): value is RegExp {
   return value instanceof RegExp;
 }
+
+/** Whether the value is empty object or not.
+ *
+ * ```ts
+ * import { isEmptyObject } from "https://deno.land/x/isx@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * assertEquals(isEmptyObject({}), true);
+ * assertEquals(isEmptyObject({ a: "b" }), false);
+ * assertEquals(isEmptyObject([]), false);
+ * ```
+ */
+export function isEmptyObject(value: unknown): value is Record<never, never> {
+  return !Object.getOwnPropertyNames(value).length &&
+    !Object.getOwnPropertySymbols(value).length;
+}

@@ -293,6 +293,18 @@ assertEquals(isRegExp(new RegExp("")), true);
 assertEquals(isRegExp({}), false);
 ```
 
+## isEmptyObject
+
+Whether the value is empty object or not.
+
+```ts
+import { isEmptyObject } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isEmptyObject({}), true);
+assertEquals(isEmptyObject({ a: "b" }), false);
+assertEquals(isEmptyObject([]), false);
+```
+
 ## String subsets
 
 Validates a subset of `string`. All validate functions must satisfy ⊂ `string`.
