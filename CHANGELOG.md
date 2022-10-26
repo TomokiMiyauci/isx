@@ -1,3 +1,11 @@
+# [1.0.0-beta.22](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.21...1.0.0-beta.22) (2022-09-22)
+
+
+### Features
+
+* **mod:** export `isRegExp` globaly ([30125c8](https://github.com/TomokiMiyauci/isx/commit/30125c8639a4cc96539fe3a970ee94d47801f201))
+* **toptypes:** add `isRegExp` function ([87a3d06](https://github.com/TomokiMiyauci/isx/commit/87a3d06558e8f688ea6e122ae5a7e7f23dd1db74))
+
 # [1.0.0-beta.21](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.20...1.0.0-beta.21) (2022-08-31)
 
 
