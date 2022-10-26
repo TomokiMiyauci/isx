@@ -72,7 +72,7 @@ export function isRfc3339DateFormat(value: string): value is DateFormat {
 const FULL_TIME =
   "(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:Z|[+-][01]\\d:[0-5]\\d)";
 
-const DATE_TIME = `${FULL_DATE}T${FULL_TIME}`;
+const DATE_TIME = /* @__PURE__ */ `${FULL_DATE}T${FULL_TIME}`;
 
 /** Whether the value is RFC 3339 time format or not.
  * The format compliant with {@link https://www.rfc-editor.org/rfc/rfc3339#section-5.6 RFC 3339, 5.6. Internet Date/Time Format, full-time}
