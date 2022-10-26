@@ -9,6 +9,7 @@ import {
   isFalsy,
   isFunction,
   isIterable,
+  isNonNullable,
   isNull,
   isNullable,
   isNumber,
@@ -93,6 +94,38 @@ Deno.test({
       null: true,
       undefined: true,
     }).forEach(([a, b]) => assertEquals(isNullable(a), b));
+  },
+});
+
+Deno.test({
+  name: "isNonNullable",
+  fn: () => {
+    defineTable({
+      null: false,
+      undefined: false,
+      "() => {}": true,
+      "-1": true,
+      "0": true,
+      "1": true,
+      "": true,
+      "[[]]": true,
+      "[]": true,
+      "big1": true,
+      "date": true,
+      "error": true,
+      "false": true,
+      "function": true,
+      "map": true,
+      "promise": true,
+      "set": true,
+      "string": true,
+      "symbol": true,
+      "true": true,
+      "weakMap": true,
+      "weakSet": true,
+      "{{}}": true,
+      "{}": true,
+    }).forEach(([a, b]) => assertEquals(isNonNullable(a), b));
   },
 });
 

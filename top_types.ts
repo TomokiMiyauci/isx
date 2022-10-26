@@ -125,6 +125,20 @@ export function isNullable(value: unknown): value is null | undefined {
   return isNull(value) || isUndefined(value);
 }
 
+/** Whether the value is non-nullable or not.
+ * @param value - Any value.
+ * ```ts
+ * import { isNonNullable } from "https://deno.land/x/isx@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * assertEquals(isNonNullable({}), true);
+ * assertEquals(isNonNullable(null), false);
+ * assertEquals(isNonNullable(undefined), false);
+ * ```
+ */
+export function isNonNullable(value: unknown): value is {} {
+  return !isNullable(value);
+}
+
 /** Whether the value is `Function` or not.
  * @param value - Any value.
  *

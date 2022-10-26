@@ -9,6 +9,7 @@ export {
   isFalsy,
   isFunction,
   isIterable,
+  isNonNullable,
   isNull,
   isNullable,
   isNumber,

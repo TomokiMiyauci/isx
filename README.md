@@ -124,6 +124,30 @@ assertEquals(isSymbol(Symbol("symbol")), true);
 assertEquals(isSymbol(null), false);
 ```
 
+## isNullable
+
+Whether the value is `null` or `undefined` or not.
+
+```ts
+import { isNullable } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isNullable(null), true);
+assertEquals(isNullable(undefined), true);
+assertEquals(isNullable({}), false);
+```
+
+## isNonNullable
+
+Whether the value is non-nullable or not.
+
+```ts
+import { isNonNullable } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isNonNullable({}), true);
+assertEquals(isNonNullable(null), false);
+assertEquals(isNonNullable(undefined), false);
+```
+
 ## isTruthy
 
 Whether the value is `TruthyLike` or not.
