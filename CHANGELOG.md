@@ -1,3 +1,17 @@
+# [1.0.0-beta.23](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.22...1.0.0-beta.23) (2022-10-26)
+
+
+### Features
+
+* **top_types:** add `isEmptyObject` function ([cb15082](https://github.com/TomokiMiyauci/isx/commit/cb15082fc7c1821c4c2bb8f7a9801055fec84dfc))
+* **top_types:** add `isNonNullable` function ([9f8b5fd](https://github.com/TomokiMiyauci/isx/commit/9f8b5fdb46ca18f75888e086b5ab29ac2c649159))
+
+
+### Performance Improvements
+
+* **strings:** add pure anotation for bundler ([0a3b1d0](https://github.com/TomokiMiyauci/isx/commit/0a3b1d0190a5ee5950742674b91b034793b40d93))
+* **strings:** remove template literal for tree-shaking ([b291ae4](https://github.com/TomokiMiyauci/isx/commit/b291ae489e922fe89f555234ed42df53957858ba))
+
 # [1.0.0-beta.22](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.21...1.0.0-beta.22) (2022-09-22)
 
 
