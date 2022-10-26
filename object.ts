@@ -1,3 +1,6 @@
+// Copyright 2022-latest Tomoki Miyauchi. All rights reserved. MIT license.
+// This module is browser compatible.
+
 /** Whether the value has the property or not.
  * The difference from `Object.hasOwn` is that it has a Type guard.
  * @param key Any property key.

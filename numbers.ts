@@ -1,3 +1,6 @@
+// Copyright 2022-latest Tomoki Miyauchi. All rights reserved. MIT license.
+// This module is browser compatible.
+
 /** Whether the value is odd or not.
  * @param value - Any `number`.
  * @example

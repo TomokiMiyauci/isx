@@ -496,6 +496,6 @@ assertEquals(isValidDate(new Date("invalid")), false);
 
 ## License
 
-Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
+Copyright © 2021-present [Tomoki Miyauchi](https://github.com/TomokiMiyauci).
 
 Released under the [MIT](./LICENSE) license
