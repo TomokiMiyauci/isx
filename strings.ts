@@ -1,5 +1,6 @@
 /** Whether the value is Hex color or not.
  * @param value - Any `string`.
+ * @example
  * ```ts
  * import { isHexColorFormat } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -20,7 +21,8 @@ const ReHostname =
   /^[a-z\d]([a-z\d\-]{0,61}[a-z\d])?(\.[a-z\d]([a-z\d\-]{0,61}[a-z\d])?)*$/i;
 
 /** Whether the value is hostname format or not.
- *
+ * @param value - Any `string`.
+ * @example
  * ```ts
  * import { isHostnameFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
@@ -57,7 +59,8 @@ const FULL_DATE =
 
 /** Whether the value is RFC 3339 date format or not.
  * The format compliant with {@link https://www.rfc-editor.org/rfc/rfc3339#section-5.6 RFC 3339, 5.6. Internet Date/Time Format, full-date}
- *
+ * @param value - Any `string`.
+ * @example
  * ```ts
  * import { isRfc3339DateFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
@@ -76,7 +79,8 @@ const DATE_TIME = /* @__PURE__ */ `${FULL_DATE}T${FULL_TIME}`;
 
 /** Whether the value is RFC 3339 time format or not.
  * The format compliant with {@link https://www.rfc-editor.org/rfc/rfc3339#section-5.6 RFC 3339, 5.6. Internet Date/Time Format, full-time}
- *
+ * @param value - Any `string`.
+ * @example
  * ```ts
  * import { isRfc3339TimeFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
@@ -91,7 +95,8 @@ export function isRfc3339TimeFormat(value: string): value is TimeFormat {
 
 /** Whether the value is RFC 3339 date time format or not.
  * The format compliant with {@link https://www.rfc-editor.org/rfc/rfc3339#section-5.6 RFC 3339, 5.6. Internet Date/Time Format, date-time}
- *
+ * @param value - Any `string`.
+ * @example
  * ```ts
  * import { isRfc3339DateTimeFormat } from "https://deno.land/x/isx@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";

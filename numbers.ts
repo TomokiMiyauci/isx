@@ -1,6 +1,6 @@
 /** Whether the value is odd or not.
  * @param value - Any `number`.
- *
+ * @example
  * ```ts
  * import { isOdd } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -14,7 +14,7 @@ export function isOdd(value: number): boolean {
 
 /** Whether the value is even or not.
  * @param value - Any `number`.
- *
+ * @example
  * ```ts
  * import { isEven } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -28,7 +28,7 @@ export function isEven(value: number): boolean {
 
 /** Whether the value is positive number or not.
  * @param value - Any `number`.
- *
+ * @example
  * ```ts
  * import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -42,7 +42,7 @@ export function isPositiveNumber(value: number): boolean {
 
 /** Whether the value is negative number or not.
  * @param value - Any `number`.
- *
+ * @example
  * ```ts
  * import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
@@ -56,7 +56,7 @@ export function isNegativeNumber(value: number): boolean {
 
 /** Whether the value is non negative integer or not.
  * @param value - Any `number`.
- *
+ * @example
  * ```ts
  * import { isNonNegativeInteger } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"

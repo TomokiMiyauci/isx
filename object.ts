@@ -1,9 +1,8 @@
 /** Whether the value has the property or not.
  * The difference from `Object.hasOwn` is that it has a Type guard.
- *
- * @params Any `PropertyKey`.
- * @prams Any `object`.
- *
+ * @param key Any property key.
+ * @param value Any object.
+ * @example
  * ```ts
  * import { hasOwn } from "https://deno.land/x/isx@$VERSION/mod.ts";
  *
@@ -13,7 +12,7 @@
  * }
  * ```
  */
-export function hasOwn<T extends PropertyKey, U extends object>(
+export function hasOwn<T extends PropertyKey, U extends {}>(
   key: T,
   value: U,
 ): value is U & { [k in T]: unknown } {

@@ -1,6 +1,6 @@
 /** Whether the value is valid `Date` or not.
  * @param value - Any `Date`
- * .
+ * @example
  * ```ts
  * import { isValidDate } from "https://deno.land/x/isx@$VERSION/mod.ts"
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
