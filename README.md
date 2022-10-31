@@ -462,6 +462,19 @@ assertEquals(isNegativeNumber(-1), true);
 assertEquals(isNegativeNumber(0), false);
 ```
 
+### isNonNegativeNumber
+
+Whether the input is non-negative number or not. Non-negative number means
+greater than or equal to zero.
+
+```ts
+import { isNonNegativeNumber } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isNonNegativeNumber(0), true);
+assertEquals(isNonNegativeNumber(1), true);
+assertEquals(isNonNegativeNumber(-1), false);
+```
+
 ### isNonNegativeInteger
 
 Whether the value is non negative integer or not.

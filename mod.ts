@@ -31,6 +31,7 @@ export {
   isEven,
   isNegativeNumber,
   isNonNegativeInteger,
+  isNonNegativeNumber,
   isNonPositiveNumber,
   isOdd,
   isPositiveNumber,
