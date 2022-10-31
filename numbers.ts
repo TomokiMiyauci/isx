@@ -43,6 +43,21 @@ export function isPositiveNumber(value: number): boolean {
   return Number.isFinite(value) && value > 0;
 }
 
+/** Whether the input is non-positive number or not.
+ * Non-positive number means less than or equal to zero.
+ * @param value - Any `number`.
+ * ```ts
+ * import { isNonPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * assertEquals(isNonPositiveNumber(0), true);
+ * assertEquals(isNonPositiveNumber(-1), true);
+ * assertEquals(isNonPositiveNumber(1), false);
+ * ```
+ */
+export function isNonPositiveNumber(value: number): boolean {
+  return Number.isFinite(value) && value <= 0;
+}
+
 /** Whether the value is negative number or not.
  * @param value - Any `number`.
  * @example

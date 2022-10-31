@@ -438,6 +438,19 @@ assertEquals(isPositiveNumber(1), true);
 assertEquals(isPositiveNumber(0), false);
 ```
 
+### isNonPositiveNumber
+
+Whether the input is non-positive number or not. Non-positive number means less
+than or equal to zero.
+
+```ts
+import { isNonPositiveNumber } from "https://deno.land/x/isx@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+assertEquals(isNonPositiveNumber(0), true);
+assertEquals(isNonPositiveNumber(-1), true);
+assertEquals(isNonPositiveNumber(1), false);
+```
+
 ### isNegativeNumber
 
 Whether the value is negative number or not.

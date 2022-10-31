@@ -31,6 +31,7 @@ export {
   isEven,
   isNegativeNumber,
   isNonNegativeInteger,
+  isNonPositiveNumber,
   isOdd,
   isPositiveNumber,
 } from "./numbers.ts";

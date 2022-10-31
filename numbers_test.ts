@@ -2,6 +2,7 @@ import {
   isEven,
   isNegativeNumber,
   isNonNegativeInteger,
+  isNonPositiveNumber,
   isOdd,
   isPositiveNumber,
 } from "./numbers.ts";
@@ -57,6 +58,26 @@ Deno.test({
       },
     }).forEach(
       (value) => assertEquals(isPositiveNumber(value), true, String(value)),
+    ),
+});
+
+Deno.test({
+  name: "isNonPositiveNumber",
+  fn: () =>
+    numbers({
+      real: {
+        rational: {
+          decimal: {
+            negative: true,
+          },
+          integer: {
+            zero: true,
+            negative: true,
+          },
+        },
+      },
+    }).forEach(
+      (value) => assertEquals(isNonPositiveNumber(value), true, String(value)),
     ),
 });
 
