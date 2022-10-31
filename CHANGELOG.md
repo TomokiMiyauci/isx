@@ -1,3 +1,11 @@
+# [1.0.0-beta.24](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.23...1.0.0-beta.24) (2022-10-31)
+
+
+### Features
+
+* **numbers:** add `isNonNegativeNumber` function ([a5b09ed](https://github.com/TomokiMiyauci/isx/commit/a5b09ed24831bcc1af7e68e4bcf33ec1033c1b37))
+* **numbers:** add `isNonPositiveNumber` function ([9005e4d](https://github.com/TomokiMiyauci/isx/commit/9005e4d22e73e5b40158a25494043e8d1d5ee274))
+
 # [1.0.0-beta.23](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.22...1.0.0-beta.23) (2022-10-26)
 
 
