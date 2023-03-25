@@ -1,7 +1,13 @@
-import { DATE_MAP } from "./date.ts";
-import { makeDefineTable } from "./utils.ts";
+type ValueOf<T> = T[keyof T];
 
-const { date } = DATE_MAP;
+function makeDefineTable<T extends Record<PropertyKey, unknown>>(MAP: T) {
+  return (map: { [k in keyof T]?: unknown }): [ValueOf<T>, boolean][] => {
+    return Object.entries({ ...MAP }).map(([key, input]) => {
+      const v = key in map ? (map as never)[key] : false;
+      return [input, v];
+    }) as [ValueOf<T>, boolean][];
+  };
+}
 
 const MAP = {
   0: 0,
@@ -26,7 +32,6 @@ const MAP = {
   "() => {}": () => {},
   promise: Promise.resolve(),
   function: new Function(),
-  date,
   error: new Error(),
 };
 

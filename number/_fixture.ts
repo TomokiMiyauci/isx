@@ -42,8 +42,8 @@ export function numbers(number: Number): number[] {
 
   const imaginary = number?.imaginary ? imaginaryNumbers() : [];
 
-  [...realNumbers(real), ...imaginary].forEach((value) => {
-    numberSet.add(value);
+  [...realNumbers(real), ...imaginary].forEach((input) => {
+    numberSet.add(input);
   });
 
   return Array.from(numberSet);
@@ -69,8 +69,8 @@ function realNumbers(realNumber: RealNumber): number[] {
     : {};
 
   [...rationalNumbers(rational), ...irrationalNumbers(irrational)].forEach(
-    (value) => {
-      numberSet.add(value);
+    (input) => {
+      numberSet.add(input);
     },
   );
 
@@ -99,8 +99,8 @@ export function rationalNumbers(rational: Rational): number[] {
     ? rational.decimal
     : {};
 
-  [...integerNumbers(integer), ...decimalNumbers(decimal)].forEach((value) => {
-    numberSet.add(value);
+  [...integerNumbers(integer), ...decimalNumbers(decimal)].forEach((input) => {
+    numberSet.add(input);
   });
 
   return Array.from(numberSet);

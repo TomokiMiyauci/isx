@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "test": "deno test --doc"
+    "test": "deno test --doc --import-map=./_test_import_map.json"
   },
   "compilerOptions": {
     "noFallthroughCasesInSwitch": true,
@@ -25,6 +25,5 @@
     "files": {
       "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
     }
-  },
-  "importMap": "_test_import_map.json"
+  }
 }
