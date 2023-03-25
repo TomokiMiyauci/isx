@@ -1,7 +1,5 @@
 # isx
 
-TypeScript-first validate collections for JavaScript data.
-
 [![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/isx)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/isx)](https://github.com/TomokiMiyauci/isx/releases)
 [![codecov](https://codecov.io/github/TomokiMiyauci/isx/branch/main/graph/badge.svg)](https://codecov.io/gh/TomokiMiyauci/isx)
@@ -10,14 +8,34 @@ TypeScript-first validate collections for JavaScript data.
 [![test](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yaml)
 [![NPM](https://nodei.co/npm/@miyauci/isx.png?mini=true)](https://nodei.co/npm/@miyauci/isx/)
 
-## What
+TypeScript-first validate collections for JavaScript data.
 
-This is a very small collection of validate functions. The validate function
-provides a custom type guard whenever it can.
+This is a very small collection of validate functions. It provides a custom type
+guard whenever it can.
 
-There is no single entry point such as `mod`.
+## Module structure and capability
 
-This prevents the inclusion of many unnecessary modules.
+Module can be divided into two categories.
+
+- [Top-type module](#top-type-module)
+- [Sub-type module](#sub-type-module)
+
+### Top-type module
+
+Top-type module can accept any JavaScript value. In other words, it accepts the
+`unknown` type, which is top-type.
+
+Most of them can be used to identify the type by a type guard.
+
+The module directly under namespace is it.
+
+### Sub-type module
+
+Sub-type modules are modules that perform type-dependent operations. It can use
+type-specific methods and compare values.
+
+For example, the module under `number` is a sub-type module that takes a
+`number` type as an argument.
 
 ## isString
 
@@ -226,9 +244,9 @@ assertEquals(isRegExp(new RegExp("")), true);
 assertEquals(isRegExp({}), false);
 ```
 
-## Number subsets
+## Number subtypes
 
-Validates a subset of `number`. All validate functions must satisfy ⊂ `number`.
+Validates a subtype of `number`. All validate functions must satisfy ⊂ `number`.
 
 ### isOdd
 
@@ -312,9 +330,9 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
-## Date subsets
+## Date subtypes
 
-Validates a subset of `Date`. All validate functions must satisfy ⊂ `Date`.
+Validates a subtype of `Date`. All validate functions must satisfy ⊂ `Date`.
 
 ### isValidDate
 
@@ -326,6 +344,12 @@ import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
 assertEquals(isValidDate(new Date("2000/1/1")), true);
 assertEquals(isValidDate(new Date("invalid")), false);
 ```
+
+## Where is mod?
+
+There is no single entry point such as `mod`.
+
+This prevents the inclusion of many unnecessary modules.
 
 ## License
 
