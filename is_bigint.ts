@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isBigint } from "https://deno.land/x/isx@$VERSION/is_bigint.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isBigint(1000n), true)
  * assertEquals(isBigint(undefined), false)
  * ```

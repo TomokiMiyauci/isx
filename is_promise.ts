@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isPromise } from "https://deno.land/x/isx@$VERSION/is_promise.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isPromise(Promise.resolve()), true)
  * assertEquals(isPromise({}), false)
  * ```

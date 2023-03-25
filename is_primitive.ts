@@ -19,7 +19,7 @@ export type Primitive =
  * @example
  * ```ts
  * import { isPrimitive } from "https://deno.land/x/isx@$VERSION/is_primitive.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isPrimitive(true), true)
  * assertEquals(isPrimitive(() => {}), false)
  * ```

@@ -8,7 +8,7 @@ import { isFunction } from "./is_function.ts";
  * @example
  * ```ts
  * import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/is_async_iterable.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(
  *   isAsyncIterable({
  *     async *[Symbol.asyncIterator]() {

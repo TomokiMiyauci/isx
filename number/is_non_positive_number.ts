@@ -7,7 +7,7 @@
  * @example
  * ```ts
  * import { isNonPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/is_non_positive_number.ts";
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
  * assertEquals(isNonPositiveNumber(0), true);
  * assertEquals(isNonPositiveNumber(-1), true);
  * assertEquals(isNonPositiveNumber(1), false);

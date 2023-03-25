@@ -8,7 +8,7 @@ import { isFunction } from "./is_function.ts";
  * @example
  * ```ts
  * import { isIterable } from "https://deno.land/x/isx@$VERSION/is_iterable.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isIterable(""), true)
  * assertEquals(isIterable({}), false)
  * ```

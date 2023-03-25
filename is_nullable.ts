@@ -9,7 +9,7 @@ import { isUndefined } from "./is_undefined.ts";
  * @example
  * ```ts
  * import { isNullable } from "https://deno.land/x/isx@$VERSION/is_nullable.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isNullable(null), true)
  * assertEquals(isNullable(undefined), true)
  * assertEquals(isNullable({}), false)

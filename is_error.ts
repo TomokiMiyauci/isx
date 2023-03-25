@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isError } from "https://deno.land/x/isx@$VERSION/is_error.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isError(Error()), true)
  * assertEquals(isError(new SyntaxError()), true)
  * assertEquals(isError(new Date()), false);

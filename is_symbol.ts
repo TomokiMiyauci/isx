@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isSymbol } from "https://deno.land/x/isx@$VERSION/is_symbol.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isSymbol(Symbol("symbol")), true)
  * assertEquals(isSymbol(null), false)
  * ```

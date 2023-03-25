@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isDate } from "https://deno.land/x/isx@$VERSION/is_date.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isDate(new Date()), true)
  * assertEquals(isDate({}), false)
  * ```

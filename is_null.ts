@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isNull } from "https://deno.land/x/isx@$VERSION/is_null.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isNull(null), true)
  * assertEquals(isNull(undefined), false)
  * ```

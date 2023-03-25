@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isEven } from "https://deno.land/x/isx@$VERSION/number/is_even.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isEven(0), true)
  * assertEquals(isEven(1), false)
  * ```

@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isString } from "https://deno.land/x/isx@$VERSION/is_string.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isString('hello world'), true)
  * assertEquals(isString(1000), false)
  * ```

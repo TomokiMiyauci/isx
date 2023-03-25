@@ -8,7 +8,7 @@ import { isNull } from "./is_null.ts";
  *
  * ```ts
  * import { isObject } from "https://deno.land/x/isx@$VERSION/is_object.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isObject({}), true)
  * assertEquals(isObject(null), false)
  * ```

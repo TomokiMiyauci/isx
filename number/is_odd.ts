@@ -9,7 +9,7 @@
  * @example
  * ```ts
  * import { isOdd } from "https://deno.land/x/isx@$VERSION/number/is_odd.ts"
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts"
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
  * assertEquals(isOdd(1), true)
  * assertEquals(isOdd(0), false)
  * ```

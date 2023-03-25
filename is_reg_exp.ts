@@ -6,7 +6,7 @@
  * @example
  * ```ts
  * import { isRegExp } from "https://deno.land/x/isx@$VERSION/is_reg_exp.ts";
- * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
  * assertEquals(isRegExp(new RegExp("")), true);
  * assertEquals(isRegExp({}), false);
  * ```
