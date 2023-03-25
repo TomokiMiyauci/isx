@@ -11,6 +11,10 @@ TypeScript-first validate collections for JavaScript data.
 This is a very small collection of validate functions. The validate function
 provides a custom type guard whenever it can.
 
+There is no single entry point such as `mod`.
+
+This prevents the inclusion of many unnecessary modules.
+
 ## isString
 
 Whether the input is `string` or not.
