@@ -3,8 +3,12 @@
 TypeScript-first validate collections for JavaScript data.
 
 [![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/isx)
-[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/isx/mod.ts)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/isx)](https://github.com/TomokiMiyauci/isx/releases)
+[![codecov](https://codecov.io/github/TomokiMiyauci/isx/branch/main/graph/badge.svg)](https://codecov.io/gh/TomokiMiyauci/isx)
+[![GitHub](https://img.shields.io/github/license/TomokiMiyauci/isx)](https://github.com/TomokiMiyauci/isx/blob/main/LICENSE)
+
+[![test](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yaml)
+[![NPM](https://nodei.co/npm/@miyauci/isx.png?mini=true)](https://nodei.co/npm/@miyauci/isx/)
 
 ## What
 
@@ -325,6 +329,6 @@ assertEquals(isValidDate(new Date("invalid")), false);
 
 ## License
 
-Copyright © 2021-present [Tomoki Miyauchi](https://github.com/TomokiMiyauci).
+Copyright © 2023-present [Tomoki Miyauchi](https://github.com/TomokiMiyauci).
 
 Released under the [MIT](./LICENSE) license
