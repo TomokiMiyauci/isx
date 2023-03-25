@@ -8,7 +8,7 @@
 [![test](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/isx/actions/workflows/test.yaml)
 [![NPM](https://nodei.co/npm/@miyauci/isx.png?mini=true)](https://nodei.co/npm/@miyauci/isx/)
 
-TypeScript-first validate collections for JavaScript data.
+Collection of validation functions for JavaScript data.
 
 This is a very small collection of validate functions. It provides a custom type
 guard whenever it can.
@@ -22,7 +22,7 @@ Module can be divided into two categories.
 
 ### Top-type module
 
-Top-type module can accept any JavaScript value. In other words, it accepts the
+Top-type module can accept any JavaScript data. In other words, it accepts the
 `unknown` type, which is top-type.
 
 Most of them can be used to identify the type by a type guard.
