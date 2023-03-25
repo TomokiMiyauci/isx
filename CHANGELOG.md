@@ -1,3 +1,11 @@
+# [1.0.0-beta.25](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.24...1.0.0-beta.25) (2023-03-25)
+
+
+### Features
+
+* split all modules by file ([5d042f6](https://github.com/TomokiMiyauci/isx/commit/5d042f6a90a8f21372e01119cd4875b37f2a7986))
+* **strings:** delete all string subset ([e0946e3](https://github.com/TomokiMiyauci/isx/commit/e0946e3debbda713e36529ebef1b35e42cf8ae7b))
+
 # [1.0.0-beta.24](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.23...1.0.0-beta.24) (2022-10-31)
 
 
