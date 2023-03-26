@@ -4,183 +4,74 @@ on:
   push:
     branches:
       - beta
+      - main
 
 jobs:
-  setup:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.0.2
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --prefer-offline]
-
   lint:
-    needs: [setup]
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        deno: [v1.x]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
+      - uses: denoland/setup-deno@v1
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Restore node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.0.2
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --prefer-offline]
+          deno-version: ${{ matrix.deno }}
 
       - name: Lint
-        run: pnpm lint
+        run: |
+          deno fmt --check
+          deno lint
 
   test:
-    needs: [setup]
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        deno: [v1.x]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
+      - uses: denoland/setup-deno@v1
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Restore node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.0.2
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --prefer-offline]
+          deno-version: ${{ matrix.deno }}
 
       - name: Test
-        run: pnpm test
+        run: deno task test --coverage=coverage
 
-  build:
-    needs: [setup]
-    runs-on: ${{ matrix.os }}
+      - name: Generate coverage
+        if: ${{ matrix.deno == 'v1.x' }}
+        run: deno task coverage coverage --lcov > cov_profile.lcov
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [16]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v2
+      - uses: codecov/codecov-action@v2
+        if: ${{ matrix.deno == 'v1.x' }}
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Restore node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.0.2
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --prefer-offline]
-
-      - name: Build
-        run: yarn build
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
+          files: cov_profile.lcov
 
   release:
-    needs: [lint, test, build]
+    needs: [lint, test]
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
+      - uses: cycjimmy/semantic-release-action@v3
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Restore node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.0.2
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --prefer-offline]
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: dist
-          path: dist
-
-      - name: Release
-        run: yarn release
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

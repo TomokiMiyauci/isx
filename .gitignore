@@ -1,11 +1,4 @@
-node_modules
 .DS_Store
-dist
-dist-ssr
-*.local
-*.log
+Thumbs.db
+npm/
 coverage
-storybook-static
-
-.vercel
-.eslintcache
