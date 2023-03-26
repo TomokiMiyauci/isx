@@ -1,3 +1,10 @@
+# [1.0.0-beta.26](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.25...1.0.0-beta.26) (2023-03-26)
+
+
+### Bug Fixes
+
+* **_tools:** fix npm build script for generate types versions ([ddb39fc](https://github.com/TomokiMiyauci/isx/commit/ddb39fc674ea0f62c495ff5d982eff8148808f4f))
+
 # [1.0.0-beta.25](https://github.com/TomokiMiyauci/isx/compare/1.0.0-beta.24...1.0.0-beta.25) (2023-03-25)
 
 
