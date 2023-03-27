@@ -26,6 +26,7 @@ export function isEmpty(input: string): input is "";
  * assertFalse(isEmpty([""]));
  * ```
  */
+export function isEmpty(input: unknown[]): input is [];
 export function isEmpty(input: readonly unknown[]): input is readonly [];
 /** Wether the input is empty or not.
  * @param input Any iterable.

@@ -404,7 +404,7 @@ If the input is a string, it has a `""` type guard.
 
 array:
 
-If the input is a array, it has a `readonly []` type guard.
+If the input is a array, it has a `[]` type guard.
 
 ### isNotEmpty
 
@@ -422,7 +422,7 @@ assert(isNotEmpty([0, 1]));
 
 array:
 
-If the input is a `readonly T[]`, it has a `readonly [T, ...T[]]` type guard.
+If the input is a `T[]`, it has a `[T, ...T[]]` type guard.
 
 ### isSingle
 
@@ -441,7 +441,7 @@ assertFalse(isSingle([0, 1, 2]));
 
 array:
 
-If the input is a `readonly T[]`, it has a `readonly [T]` type guard.
+If the input is a `T[]`, it has a `[T]` type guard.
 
 ## Date subtypes
 
