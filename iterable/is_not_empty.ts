@@ -13,6 +13,7 @@
  * assert(isNotEmpty([[]]));
  * ```
  */
+export function isNotEmpty<T>(input: T[]): input is [T, ...T[]];
 export function isNotEmpty<T>(
   input: readonly T[],
 ): input is readonly [T, ...T[]];

@@ -14,6 +14,7 @@
  * assertFalse(isSingle([0, 1, 2]));
  * ```
  */
+export function isSingle<T>(input: T[]): input is [T];
 export function isSingle<T>(input: readonly T[]): input is readonly [T];
 /** Whether the input is single element or not.
  * @param input Any iterable.
