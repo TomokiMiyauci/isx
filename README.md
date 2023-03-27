@@ -372,6 +372,23 @@ array:
 
 If the input is a `readonly T[]`, it has a `readonly [T, ...T[]]` type guard.
 
+### isSingle
+
+Whether the input is single element or not.
+
+```ts
+import { isSingle } from "https://deno.land/x/isx@$VERSION/iterable/is_single.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+
+assert(isSingle("a"));
+assert(isSingle([0]));
+assertFalse(isSingle([0, 1, 2]));
+```
+
+array:
+
+If the input is a `readonly T[]`, it has a `readonly [T]` type guard.
+
 ## Date subtypes
 
 Validates a subtype of `Date`. All validate functions must satisfy ⊂ `Date`.
