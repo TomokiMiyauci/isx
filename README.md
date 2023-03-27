@@ -354,7 +354,7 @@ If the input is a string, it has a `""` type guard.
 
 array:
 
-If the input is a array, it has a `[]` type guard.
+If the input is a array, it has a `readonly []` type guard.
 
 ### isNotEmpty
 
