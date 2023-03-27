@@ -356,6 +356,22 @@ array:
 
 If the input is a array, it has a `[]` type guard.
 
+### isNotEmpty
+
+Whether the input is not empty or not.
+
+```ts
+import { isNotEmpty } from "https://deno.land/x/isx@$VERSION/iterable/is_not_empty.ts";
+import { assert } from "https://deno.land/std/testing/asserts.ts";
+
+assert(isNotEmpty("a"));
+assert(isNotEmpty([0, 1]));
+```
+
+array:
+
+If the input is a `readonly T[]`, it has a `readonly [T, ...T[]]` type guard.
+
 ## Date subtypes
 
 Validates a subtype of `Date`. All validate functions must satisfy ⊂ `Date`.
