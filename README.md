@@ -39,6 +39,8 @@ For example, the module under `number` is a sub-type module that takes a
 
 ## isString
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_string.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_string.ts)
+
 Whether the input is `string` or not.
 
 ```ts
@@ -49,6 +51,8 @@ assertEquals(isString(1000), false);
 ```
 
 ## isNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_number.ts)
 
 Whether the input is `number` or not.
 
@@ -61,6 +65,8 @@ assertEquals(isNumber("hello world"), false);
 
 ## isBigint
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_bigint.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_bigint.ts)
+
 Whether the input is `bigint` or not.
 
 ```ts
@@ -71,6 +77,8 @@ assertEquals(isBigint(undefined), false);
 ```
 
 ## isNull
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_null.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_null.ts)
 
 Whether the input is `null` or not.
 
@@ -83,6 +91,8 @@ assertEquals(isNull(undefined), false);
 
 ## isUndefined
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_undefined.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_undefined.ts)
+
 Whether the input is `undefined` or not.
 
 ```ts
@@ -93,6 +103,8 @@ assertEquals(isUndefined(null), false);
 ```
 
 ## isBoolean
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_boolean.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_boolean.ts)
 
 Whether the input is `boolean` or not.
 
@@ -105,6 +117,8 @@ assertEquals(isBoolean(null), false);
 
 ## isFunction
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_function.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_function.ts)
+
 Whether the input is `Function` or not.
 
 ```ts
@@ -115,6 +129,8 @@ assertEquals(isFunction({}), false);
 ```
 
 ## isObject
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_object.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_object.ts)
 
 Whether the input is `object` or not.
 
@@ -127,6 +143,8 @@ assertEquals(isObject(null), false);
 
 ## isSymbol
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_symbol.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_symbol.ts)
+
 Whether the input is `symbol` or not.
 
 ```ts
@@ -137,6 +155,8 @@ assertEquals(isSymbol(null), false);
 ```
 
 ## isNullable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_nullable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_nullable.ts)
 
 Whether the input is `null` or `undefined` or not.
 
@@ -149,6 +169,8 @@ assertEquals(isNullable({}), false);
 ```
 
 ## isPrimitive
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_primitive.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_primitive.ts)
 
 Whether the input is `Primitive` or not.
 
@@ -172,6 +194,8 @@ type Primitive =
 
 ## isPromise
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_promise.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_promise.ts)
+
 Whether the input is `Promise` or not.
 
 ```ts
@@ -183,6 +207,8 @@ assertEquals(isPromise({}), false);
 
 ## isDate
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_date.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_date.ts)
+
 Whether the input is `Date` or not.
 
 ```ts
@@ -193,6 +219,8 @@ assertEquals(isDate({}), false);
 ```
 
 ## isError
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_error.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_error.ts)
 
 Whether the input is `Error` or not.
 
@@ -206,6 +234,8 @@ assertEquals(isError(new Date()), false);
 
 ## isIterable
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_iterable.ts)
+
 Whether the input is `Iterable` or not.
 
 ```ts
@@ -216,6 +246,8 @@ assertEquals(isIterable({}), false);
 ```
 
 ## isAsyncIterable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_async_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_async_iterable.ts)
 
 Whether the input is `AsyncIterable` or not.
 
@@ -235,6 +267,8 @@ assertEquals(isAsyncIterable(() => {}), false);
 
 ## isRegExp
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_reg_exp.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_reg_exp.ts)
+
 Whether the input is `RegExp` of not.
 
 ```ts
@@ -250,6 +284,8 @@ Validates a subtype of `number`. All validate functions must satisfy ⊂ `number
 
 ### isOdd
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_odd.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_odd.ts)
+
 Whether the input is odd or not.
 
 ```ts
@@ -260,6 +296,8 @@ assertEquals(isOdd(0), false);
 ```
 
 ### isEven
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_even.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_even.ts)
 
 Whether the input is even or not.
 
@@ -272,6 +310,8 @@ assertEquals(isEven(1), false);
 
 ### isPositiveNumber
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_positive_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_positive_number.ts)
+
 Whether the input is positive number or not.
 
 ```ts
@@ -282,6 +322,8 @@ assertEquals(isPositiveNumber(0), false);
 ```
 
 ### isNonPositiveNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_non_positive_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_non_positive_number.ts)
 
 Whether the input is non-positive number or not. Non-positive number means less
 than or equal to zero.
@@ -296,6 +338,8 @@ assertEquals(isNonPositiveNumber(1), false);
 
 ### isNegativeNumber
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_negative_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_negative_number.ts)
+
 Whether the input is negative number or not.
 
 ```ts
@@ -306,6 +350,8 @@ assertEquals(isNegativeNumber(0), false);
 ```
 
 ### isNonNegativeNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_non_negative_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_non_negative_number.ts)
 
 Whether the input is non-negative number or not. Non-negative number means
 greater than or equal to zero.
@@ -320,6 +366,8 @@ assertEquals(isNonNegativeNumber(-1), false);
 
 ### isNonNegativeInteger
 
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_non_negative_integer.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_non_negative_integer.ts)
+
 Whether the input is non negative integer or not.
 
 ```ts
@@ -330,11 +378,78 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
+## Iterable subtypes
+
+Validates a subtype of `Iterable`. All validate functions must satisfy ⊂
+`Iterable<unknown>`.
+
+### isEmpty
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/iterable/is_empty.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fiterable%2Fis_empty.ts)
+
+Wether the input is empty or not.
+
+```ts
+import { isEmpty } from "https://deno.land/x/isx@$VERSION/iterable/is_empty.ts";
+import { assert } from "https://deno.land/std/testing/asserts.ts";
+
+assert(isEmpty(""));
+assert(isEmpty([]));
+assert(isEmpty(new Set()));
+```
+
+string:
+
+If the input is a string, it has a `""` type guard.
+
+array:
+
+If the input is a array, it has a `readonly []` type guard.
+
+### isNotEmpty
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/iterable/is_non_empty.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fiterable%2Fis_non_empty.ts)
+
+Whether the input is not empty or not.
+
+```ts
+import { isNotEmpty } from "https://deno.land/x/isx@$VERSION/iterable/is_not_empty.ts";
+import { assert } from "https://deno.land/std/testing/asserts.ts";
+
+assert(isNotEmpty("a"));
+assert(isNotEmpty([0, 1]));
+```
+
+array:
+
+If the input is a `readonly T[]`, it has a `readonly [T, ...T[]]` type guard.
+
+### isSingle
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/iterable/is_single.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fiterable%2Fis_single.ts)
+
+Whether the input is single element or not.
+
+```ts
+import { isSingle } from "https://deno.land/x/isx@$VERSION/iterable/is_single.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+
+assert(isSingle("a"));
+assert(isSingle([0]));
+assertFalse(isSingle([0, 1, 2]));
+```
+
+array:
+
+If the input is a `readonly T[]`, it has a `readonly [T]` type guard.
+
 ## Date subtypes
 
 Validates a subtype of `Date`. All validate functions must satisfy ⊂ `Date`.
 
 ### isValidDate
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/date/is_valid_date.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fdate%2Fis_valid_date.ts)
 
 Whether the input is valid `Date` or not.
 
@@ -344,6 +459,12 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(isValidDate(new Date("2000/1/1")), true);
 assertEquals(isValidDate(new Date("invalid")), false);
 ```
+
+## Bundle size
+
+Bundle size is not exact. It is only a guide.
+
+Usually, the actual bundle size is **smaller** than the indicated value.
 
 ## Where is mod?
 
