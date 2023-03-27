@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/TomokiMiyauci/isx/compare/1.1.0...1.1.1) (2023-03-27)
+
+
+### Bug Fixes
+
+* **iterable:** add overload before readonly array type guard ([73255e1](https://github.com/TomokiMiyauci/isx/commit/73255e1d97bb1ec096a911cbf2a6b4afeb459d77)), closes [#4](https://github.com/TomokiMiyauci/isx/issues/4)
+
 ## [1.1.1-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.1.0...1.1.1-beta.1) (2023-03-27)
 
 
