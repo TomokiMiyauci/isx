@@ -445,11 +445,11 @@ If the input is a `readonly T[]`, it has a `readonly [T]` type guard.
 
 ## Date subtypes
 
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/date/is_valid_date.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fdate%2Fis_valid_date.ts)
-
 Validates a subtype of `Date`. All validate functions must satisfy ⊂ `Date`.
 
 ### isValidDate
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/date/is_valid_date.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fdate%2Fis_valid_date.ts)
 
 Whether the input is valid `Date` or not.
 
