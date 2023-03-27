@@ -330,6 +330,32 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
+## Iterable subtypes
+
+Validates a subtype of `Iterable`. All validate functions must satisfy ⊂
+`Iterable<unknown>`.
+
+### isEmpty
+
+Wether the input is empty or not.
+
+```ts
+import { isEmpty } from "https://deno.land/x/isx@$VERSION/iterable/is_empty.ts";
+import { assert } from "https://deno.land/std/testing/asserts.ts";
+
+assert(isEmpty(""));
+assert(isEmpty([]));
+assert(isEmpty(new Set()));
+```
+
+string:
+
+If the input is a string, it has a `""` type guard.
+
+array:
+
+If the input is a array, it has a `[]` type guard.
+
 ## Date subtypes
 
 Validates a subtype of `Date`. All validate functions must satisfy ⊂ `Date`.
