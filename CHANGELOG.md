@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/TomokiMiyauci/isx/compare/1.0.0...1.1.0) (2023-03-27)
+
+
+### Bug Fixes
+
+* **iterable:** add readonly signature to type guard ([5231d32](https://github.com/TomokiMiyauci/isx/commit/5231d3232d955371ca558a86eb99f6b348a2cb14))
+
+
+### Features
+
+* **iterable:** add `isEmpty` function for iterable ([fc1d5f1](https://github.com/TomokiMiyauci/isx/commit/fc1d5f1304105b7b500724462b608340ca53937b))
+* **iterable:** add `isNotEmpty` function for iterable ([3d2b9db](https://github.com/TomokiMiyauci/isx/commit/3d2b9dbc29647d34fecc7d7673a4d6d8cd289225))
+* **iterable:** add `isSingle` function for iterable ([1b4360c](https://github.com/TomokiMiyauci/isx/commit/1b4360c9bdf06b366b7572a31f349dd2642f66ec))
+
 # [1.1.0-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.0.0...1.1.0-beta.1) (2023-03-27)
 
 
