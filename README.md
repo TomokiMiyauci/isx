@@ -192,6 +192,26 @@ type Primitive =
   | symbol;
 ```
 
+## isArray
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_array.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_array.ts)
+
+Whether the input is array or not.
+
+_**Use only if input contains `ReadOnlyArray`**_. It improves type inference.
+Otherwise, use `Array.isArray`.
+
+This exists only because of TypeScript bug
+[#17002](https://github.com/microsoft/TypeScript/issues/17002). When this is
+fixed, this function will no longer be provided.
+
+```ts
+import { isArray } from "https://deno.land/x/isx@$VERSION/is_array.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(isArray([]), true);
+assertEquals(isArray({}), false);
+```
+
 ## isPromise
 
 [![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_promise.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_promise.ts)
