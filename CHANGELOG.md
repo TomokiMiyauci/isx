@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/TomokiMiyauci/isx/compare/1.1.1...1.2.0) (2023-04-11)
+
+
+### Features
+
+* **is_array:** add `isArray` function ([5f3f847](https://github.com/TomokiMiyauci/isx/commit/5f3f847b9223c60077f77cc85e260a6dd7dc35d6))
+
+
+### Performance Improvements
+
+* **iterable:** stop spread operator ([8c5f2f6](https://github.com/TomokiMiyauci/isx/commit/8c5f2f60e3257cd3db1fe1af351c33cee56b94be))
+
 # [1.2.0-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.1.1...1.2.0-beta.1) (2023-04-11)
 
 
