@@ -33,5 +33,5 @@ export function isSingle(input: Iterable<unknown>): boolean;
 export function isSingle(input: Iterable<unknown>): boolean {
   const iterator = input[Symbol.iterator]();
 
-  return !iterator.next().done && (iterator.next().done ?? false);
+  return !iterator.next().done && !!iterator.next().done;
 }
