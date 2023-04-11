@@ -42,5 +42,7 @@ export function isEmpty(input: readonly unknown[]): input is readonly [];
  */
 export function isEmpty(input: Iterable<unknown>): boolean;
 export function isEmpty(input: Iterable<unknown>): boolean {
-  return ![...input].length;
+  for (const _ of input) return false;
+
+  return true;
 }

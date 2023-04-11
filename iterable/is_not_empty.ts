@@ -31,5 +31,7 @@ export function isNotEmpty<T>(
  */
 export function isNotEmpty(input: Iterable<unknown>): boolean;
 export function isNotEmpty(input: Iterable<unknown>): boolean {
-  return !![...input].length;
+  for (const _ of input) return true;
+
+  return false;
 }

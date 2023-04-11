@@ -31,5 +31,7 @@ export function isSingle<T>(input: readonly T[]): input is readonly [T];
  */
 export function isSingle(input: Iterable<unknown>): boolean;
 export function isSingle(input: Iterable<unknown>): boolean {
-  return [...input].length === 1;
+  const iterator = input[Symbol.iterator]();
+
+  return !iterator.next().done && (iterator.next().done ?? false);
 }
