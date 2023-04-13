@@ -265,6 +265,20 @@ assertEquals(isIterable(""), true);
 assertEquals(isIterable({}), false);
 ```
 
+## isNonNullable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_non_nullable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_non_nullable.ts)
+
+Whether the input is `NonNullable` or not.
+
+```ts
+import { isNonNullable } from "https://deno.land/x/isx@$VERSION/is_non_nullable.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(isNonNullable(""), true);
+assertEquals(isNonNullable(null), false);
+assertEquals(isNonNullable(undefined), false);
+```
+
 ## isAsyncIterable
 
 [![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_async_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_async_iterable.ts)
