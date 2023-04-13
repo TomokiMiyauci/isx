@@ -412,6 +412,21 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
+### isUnitInterval
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_unit_interval.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_unit_interval.ts)
+
+Whether the input is unit interval or not. The unit interval refers to the
+interval between 0 and 1 on the real number line.
+
+```ts
+import { isUnitInterval } from "https://deno.land/x/isx@$VERSION/number/is_unit_interval.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(isUnitInterval(0), true);
+assertEquals(isUnitInterval(1.0), true);
+assertEquals(isUnitInterval(-1), false);
+```
+
 ## Iterable subtypes
 
 Validates a subtype of `Iterable`. All validate functions must satisfy ⊂
