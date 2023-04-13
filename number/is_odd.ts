@@ -1,9 +1,6 @@
 // Copyright 2023-latest Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
-// Copyright 2023-latest Tomoki Miyauchi. All rights reserved. MIT license.
-// This module is browser compatible.
-
 /** Whether the input is odd or not.
  * @param input - Any `number`.
  * @example
