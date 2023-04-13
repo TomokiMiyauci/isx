@@ -52,7 +52,7 @@ export const makeOptions = (version: string): BuildOptions => {
   const modules = [...entries].map(({ path }) => relative(root, path)).map(
     (path) => {
       const parsed = parse(path);
-      const name = join(parsed.dir, parsed.name);
+      const name = join(parsed.dir, parsed.name) + ".js";
 
       return { name, path };
     },
