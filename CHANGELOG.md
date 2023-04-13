@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/TomokiMiyauci/isx/compare/1.2.0...1.3.0) (2023-04-13)
+
+
+### Features
+
+* **is_non_nullable:** add `isNonNullable` function ([d31fdc1](https://github.com/TomokiMiyauci/isx/commit/d31fdc1c545155af2f73bd261412766a0f511d64))
+* **number:** add `isUnitInterval` function ([dabacd8](https://github.com/TomokiMiyauci/isx/commit/dabacd8c0fbed77cc2ed4dea980ce734a6112f6f))
+
 # [1.3.0-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.2.0...1.3.0-beta.1) (2023-04-13)
 
 
