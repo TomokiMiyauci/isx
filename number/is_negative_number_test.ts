@@ -1,21 +1,35 @@
 import { isNegativeNumber } from "./is_negative_number.ts";
-import { numbers } from "./_fixture.ts";
-import { assertEquals } from "../_dev_deps.ts";
+import { assert, assertFalse, describe, it } from "../_dev_deps.ts";
 
-Deno.test({
-  name: "isNegativeNumber",
-  fn: () =>
-    numbers({
-      real: {
-        rational: {
-          "decimal": { negative: true },
+describe("isNegativeNumber", () => {
+  it("should return true", () => {
+    const table: number[] = [
+      -1,
+      -0.1,
+      -Infinity,
+      Number.NEGATIVE_INFINITY,
+      Number.MIN_SAFE_INTEGER,
+    ];
 
-          "integer": {
-            "negative": true,
-          },
-        },
-      },
-    }).forEach(
-      (input) => assertEquals(isNegativeNumber(input), true),
-    ),
+    table.forEach((input) => {
+      assert(isNegativeNumber(input));
+    });
+  });
+
+  it("should return false", () => {
+    const table: number[] = [
+      NaN,
+      0,
+      -0,
+      Infinity,
+      0.1,
+      1,
+      Number.MAX_VALUE,
+      Number.MAX_SAFE_INTEGER,
+    ];
+
+    table.forEach((input) => {
+      assertFalse(isNegativeNumber(input));
+    });
+  });
 });
