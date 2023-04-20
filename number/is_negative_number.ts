@@ -12,5 +12,5 @@
  * ```
  */
 export function isNegativeNumber(input: number): boolean {
-  return Number.isFinite(input) && input < 0;
+  return input < 0;
 }

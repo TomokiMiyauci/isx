@@ -12,5 +12,5 @@
  * ```
  */
 export function isPositiveNumber(input: number): boolean {
-  return Number.isFinite(input) && input > 0;
+  return 0 < input;
 }

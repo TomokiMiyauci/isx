@@ -1,6 +1,8 @@
 // Copyright 2023-latest Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
+import { isPositiveNumber } from "./is_positive_number.ts";
+
 /** Whether the input is non-negative number or not.
  * Non-negative number means greater than or equal to zero.
  * @param input - Any `number`.
@@ -14,5 +16,5 @@
  * ```
  */
 export function isNonNegativeNumber(input: number): boolean {
-  return Number.isFinite(input) && 0 <= input;
+  return input === 0 || isPositiveNumber(input);
 }

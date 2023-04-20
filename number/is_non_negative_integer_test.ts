@@ -1,21 +1,36 @@
 import { isNonNegativeInteger } from "./is_non_negative_integer.ts";
-import { numbers } from "./_fixture.ts";
-import { assertEquals } from "../_dev_deps.ts";
+import { assert, assertFalse, describe, it } from "../_dev_deps.ts";
 
-Deno.test({
-  name: "isNonNegativeInteger",
-  fn: () => {
-    numbers({
-      real: {
-        rational: {
-          "integer": {
-            zero: true,
-            positive: true,
-          },
-        },
-      },
-    }).forEach(
-      (input) => assertEquals(isNonNegativeInteger(input), true),
-    );
-  },
+describe("isNonNegativeInteger", () => {
+  it("should return true", () => {
+    const table: number[] = [
+      0,
+      -0,
+      1,
+      1000,
+      Number.MAX_SAFE_INTEGER,
+      Number.MAX_VALUE,
+    ];
+
+    table.forEach((input) => {
+      assert(isNonNegativeInteger(input));
+    });
+  });
+
+  it("should return false", () => {
+    const table: number[] = [
+      NaN,
+      0.1,
+      -1,
+      -0.1,
+      Infinity,
+      -Infinity,
+      Number.NEGATIVE_INFINITY,
+      Number.MIN_SAFE_INTEGER,
+    ];
+
+    table.forEach((input) => {
+      assertFalse(isNonNegativeInteger(input));
+    });
+  });
 });
