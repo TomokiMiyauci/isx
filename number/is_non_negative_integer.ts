@@ -1,6 +1,8 @@
 // Copyright 2023-latest Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
+import { isNonNegativeNumber } from "./is_non_negative_number.ts";
+
 /** Whether the input is non negative integer or not.
  * @param input - Any `number`.
  * @example
@@ -13,5 +15,5 @@
  * ```
  */
 export function isNonNegativeInteger(input: number): boolean {
-  return Number.isInteger(input) && input >= 0;
+  return isNonNegativeNumber(input) && Number.isInteger(input);
 }
