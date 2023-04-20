@@ -1,3 +1,13 @@
+## [1.3.1](https://github.com/TomokiMiyauci/isx/compare/1.3.0...1.3.1) (2023-04-20)
+
+
+### Bug Fixes
+
+* **number:** change condition of non-negative number ([a4c89e9](https://github.com/TomokiMiyauci/isx/commit/a4c89e93f78379e8bc0901c94a10c979998041a3))
+* **number:** change condition of non-negative number ([d4b5b0c](https://github.com/TomokiMiyauci/isx/commit/d4b5b0ce566576c020831a172e4a17c48f32c4e9))
+* **number:** change the condition of positive number ([bca5b23](https://github.com/TomokiMiyauci/isx/commit/bca5b2363939b492eb911af4f9d68e1ba8dc85a2))
+* **number:** change the condition of positive number ([e2d7ff6](https://github.com/TomokiMiyauci/isx/commit/e2d7ff6ac9e42c7ae3fd5f7c1e817bcad3b8cc03))
+
 ## [1.3.1-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.3.0...1.3.1-beta.1) (2023-04-20)
 
 
