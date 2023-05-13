@@ -352,7 +352,21 @@ Whether the input is positive number or not.
 import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/is_positive_number.ts";
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(isPositiveNumber(1), true);
+assertEquals(isPositiveNumber(Infinity), true);
 assertEquals(isPositiveNumber(0), false);
+```
+
+### isPositiveInteger
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_positive_integer.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_positive_integer.ts)
+
+Whether the input is positive integer or not.
+
+```ts
+import { isPositiveInteger } from "https://deno.land/x/isx@$VERSION/number/is_positive_integer.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(isPositiveInteger(1), true);
+assertEquals(isPositiveInteger(0), false);
 ```
 
 ### isNonPositiveNumber
