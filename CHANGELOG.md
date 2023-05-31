@@ -1,3 +1,12 @@
+# [1.4.0-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.3.1...1.4.0-beta.1) (2023-05-31)
+
+
+### Features
+
+* **number:** add positive integer validation function ([fa38d96](https://github.com/TomokiMiyauci/isx/commit/fa38d96deaf1bcdbd454d449cd66dc9d538e020d))
+* **number:** mark as duplicated ([a774643](https://github.com/TomokiMiyauci/isx/commit/a7746438d393cc39c2d7276e621478012bd43f17))
+* **numeric:** add numeric validators ([51999df](https://github.com/TomokiMiyauci/isx/commit/51999dfa2d7e069543747337af79179f4292744d))
+
 ## [1.3.1](https://github.com/TomokiMiyauci/isx/compare/1.3.0...1.3.1) (2023-04-20)
 
 
