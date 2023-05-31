@@ -312,6 +312,82 @@ assertEquals(isRegExp(new RegExp("")), true);
 assertEquals(isRegExp({}), false);
 ```
 
+## Numeric subtypes
+
+Validates a subtype of `number` or `bigint`.
+
+### isPositiveNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/numeric/is_positive_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumeric%2Fis_positive_number.ts)
+
+Whether the input is positive number or not.
+
+```ts
+import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/numeric/is_positive_number.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+assert(isPositiveNumber(1));
+assert(isPositiveNumber(Infinity));
+assertFalse(isPositiveNumber(0));
+```
+
+### isNonPositiveNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/numeric/is_non_positive_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumeric%2Fis_non_positive_number.ts)
+
+Whether the input is non-positive number or not. Non-positive number means less
+than or equal to zero.
+
+```ts
+import { isNonPositiveNumber } from "https://deno.land/x/isx@$VERSION/numeric/is_non_positive_number.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+assert(isNonPositiveNumber(0));
+assert(isNonPositiveNumber(-1));
+assertFalse(isNonPositiveNumber(1));
+```
+
+### isNegativeNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/numeric/is_negative_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumeric%2Fis_negative_number.ts)
+
+Whether the input is negative number or not.
+
+```ts
+import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/numeric/is_negative_number.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+assert(isNegativeNumber(-1));
+assertFalse(isNegativeNumber(0));
+```
+
+### isNonNegativeNumber
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/numeric/is_non_negative_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumeric%2Fis_non_negative_number.ts)
+
+Whether the input is non-negative number or not. Non-negative number means
+greater than or equal to zero.
+
+```ts
+import { isNonNegativeNumber } from "https://deno.land/x/isx@$VERSION/numeric/is_non_negative_number.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+assert(isNonNegativeNumber(0));
+assert(isNonNegativeNumber(1));
+assertFalse(isNonNegativeNumber(-1));
+```
+
+### isUnitInterval
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/numeric/is_unit_interval.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumeric%2Fis_unit_interval.ts)
+
+Whether the input is unit interval or not. The unit interval refers to the
+interval between 0 and 1 on the real number line.
+
+```ts
+import { isUnitInterval } from "https://deno.land/x/isx@$VERSION/numeric/is_unit_interval.ts";
+import { assert, assertFalse } from "https://deno.land/std/testing/asserts.ts";
+assert(isUnitInterval(0));
+assert(isUnitInterval(1.0));
+assertFalse(isUnitInterval(-1));
+```
+
 ## Number subtypes
 
 Validates a subtype of `number`. All validate functions must satisfy ⊂ `number`.
@@ -342,20 +418,6 @@ assertEquals(isEven(0), true);
 assertEquals(isEven(1), false);
 ```
 
-### isPositiveNumber
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_positive_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_positive_number.ts)
-
-Whether the input is positive number or not.
-
-```ts
-import { isPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/is_positive_number.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isPositiveNumber(1), true);
-assertEquals(isPositiveNumber(Infinity), true);
-assertEquals(isPositiveNumber(0), false);
-```
-
 ### isPositiveInteger
 
 [![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_positive_integer.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_positive_integer.ts)
@@ -367,49 +429,6 @@ import { isPositiveInteger } from "https://deno.land/x/isx@$VERSION/number/is_po
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(isPositiveInteger(1), true);
 assertEquals(isPositiveInteger(0), false);
-```
-
-### isNonPositiveNumber
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_non_positive_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_non_positive_number.ts)
-
-Whether the input is non-positive number or not. Non-positive number means less
-than or equal to zero.
-
-```ts
-import { isNonPositiveNumber } from "https://deno.land/x/isx@$VERSION/number/is_non_positive_number.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isNonPositiveNumber(0), true);
-assertEquals(isNonPositiveNumber(-1), true);
-assertEquals(isNonPositiveNumber(1), false);
-```
-
-### isNegativeNumber
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_negative_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_negative_number.ts)
-
-Whether the input is negative number or not.
-
-```ts
-import { isNegativeNumber } from "https://deno.land/x/isx@$VERSION/number/is_negative_number.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isNegativeNumber(-1), true);
-assertEquals(isNegativeNumber(0), false);
-```
-
-### isNonNegativeNumber
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_non_negative_number.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_non_negative_number.ts)
-
-Whether the input is non-negative number or not. Non-negative number means
-greater than or equal to zero.
-
-```ts
-import { isNonNegativeNumber } from "https://deno.land/x/isx@$VERSION/number/is_non_negative_number.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isNonNegativeNumber(0), true);
-assertEquals(isNonNegativeNumber(1), true);
-assertEquals(isNonNegativeNumber(-1), false);
 ```
 
 ### isNonNegativeInteger
@@ -424,21 +443,6 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(isNonNegativeInteger(0), true);
 assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
-```
-
-### isUnitInterval
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/number/is_unit_interval.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fnumber%2Fis_unit_interval.ts)
-
-Whether the input is unit interval or not. The unit interval refers to the
-interval between 0 and 1 on the real number line.
-
-```ts
-import { isUnitInterval } from "https://deno.land/x/isx@$VERSION/number/is_unit_interval.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isUnitInterval(0), true);
-assertEquals(isUnitInterval(1.0), true);
-assertEquals(isUnitInterval(-1), false);
 ```
 
 ## Iterable subtypes
