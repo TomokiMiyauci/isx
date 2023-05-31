@@ -11,6 +11,8 @@
  * assertEquals(isPositiveNumber(Infinity), true);
  * assertEquals(isPositiveNumber(0), false)
  * ```
+ *
+ * @deprecated use numeric::isPositiveNumber
  */
 export function isPositiveNumber(input: number): boolean {
   return 0 < input;

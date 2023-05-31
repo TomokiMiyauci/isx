@@ -14,6 +14,8 @@ import { isPositiveNumber } from "./is_positive_number.ts";
  * assertEquals(isNonNegativeNumber(1), true);
  * assertEquals(isNonNegativeNumber(-1), false);
  * ```
+ *
+ * @deprecated use numeric::isNonNegativeNumber
  */
 export function isNonNegativeNumber(input: number): boolean {
   return input === 0 || isPositiveNumber(input);

@@ -12,6 +12,8 @@
  * assertEquals(isUnitInterval(1.0), true);
  * assertEquals(isUnitInterval(-1), false);
  * ```
+ *
+ * @deprecated use numeric::isUnitInterval
  */
 export function isUnitInterval(input: number): boolean {
   return 0 <= input && input <= 1;
