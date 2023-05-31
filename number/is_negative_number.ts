@@ -10,6 +10,8 @@
  * assertEquals(isNegativeNumber(-1), true)
  * assertEquals(isNegativeNumber(0), false)
  * ```
+ *
+ * @deprecated use numeric::isNegativeNumber
  */
 export function isNegativeNumber(input: number): boolean {
   return input < 0;
