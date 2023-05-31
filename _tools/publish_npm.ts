@@ -16,11 +16,12 @@ if (import.meta.main) {
   const tag = isPrerelease?.[0] ?? "latest";
 
   const pkg = makeOptions(version);
-  const result = await Deno.run({
-    cmd: ["npm", "publish", pkg.outDir, "--tag", String(tag)],
-    stdout: "piped",
-  })
-    .output();
+  const command = new Deno.Command("npm", {
+    args: ["publish", pkg.outDir, "--tag", String(tag)],
+  });
+  const result = await command.output();
 
-  console.log(new TextDecoder().decode(result));
+  if (!result.success) {
+    console.error(new TextDecoder().decode(result.stderr));
+  }
 }
