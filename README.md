@@ -252,19 +252,6 @@ assertEquals(isError(new SyntaxError()), true);
 assertEquals(isError(new Date()), false);
 ```
 
-## isIterable
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_iterable.ts)
-
-Whether the input is `Iterable` or not.
-
-```ts
-import { isIterable } from "https://deno.land/x/isx@$VERSION/is_iterable.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isIterable(""), true);
-assertEquals(isIterable({}), false);
-```
-
 ## isNonNullable
 
 [![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_non_nullable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_non_nullable.ts)
@@ -443,6 +430,23 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(isNonNegativeInteger(0), true);
 assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
+```
+
+## Object subtypes
+
+Validates a subtype of `object`. All validate functions must satisfy ⊂ `object`.
+
+### isIterable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/object/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_iterable.ts)
+
+Whether the input is `Iterable` or not.
+
+```ts
+import { isIterable } from "https://deno.land/x/isx@$VERSION/object/is_iterable.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(isIterable(""), true);
+assertEquals(isIterable({}), false);
 ```
 
 ## Iterable subtypes
