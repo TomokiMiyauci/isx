@@ -1,7 +1,7 @@
 import {
   BuildOptions,
   EntryPoint,
-} from "https://deno.land/x/dnt@0.31.0/mod.ts";
+} from "https://deno.land/x/dnt@0.37.0/mod.ts";
 
 import { expandGlobSync } from "https://deno.land/std@0.181.0/fs/expand_glob.ts";
 import {
@@ -64,7 +64,7 @@ export const makeOptions = (version: string): BuildOptions => {
   return {
     test: false,
     shims: {},
-    typeCheck: true,
+    typeCheck: "both",
     entryPoints,
     outDir: "./npm",
     package: {
