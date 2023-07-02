@@ -266,26 +266,6 @@ assertEquals(isNonNullable(null), false);
 assertEquals(isNonNullable(undefined), false);
 ```
 
-## isAsyncIterable
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_async_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_async_iterable.ts)
-
-Whether the input is `AsyncIterable` or not.
-
-```ts
-import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/is_async_iterable.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(
-  isAsyncIterable({
-    async *[Symbol.asyncIterator]() {
-      yield "hello";
-    },
-  }),
-  true,
-);
-assertEquals(isAsyncIterable(() => {}), false);
-```
-
 ## isRegExp
 
 [![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_reg_exp.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_reg_exp.ts)
@@ -435,6 +415,26 @@ assertEquals(isNonNegativeInteger(-1), false);
 ## Object subtypes
 
 Validates a subtype of `object`. All validate functions must satisfy ⊂ `object`.
+
+### isAsyncIterable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/object/is_async_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fobject%2Fis_async_iterable.ts)
+
+Whether the input is `AsyncIterable` or not.
+
+```ts
+import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/object/is_async_iterable.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(
+  isAsyncIterable({
+    async *[Symbol.asyncIterator]() {
+      yield "hello";
+    },
+  }),
+  true,
+);
+assertEquals(isAsyncIterable({}), false);
+```
 
 ### isIterable
 
