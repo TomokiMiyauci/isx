@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/TomokiMiyauci/isx/compare/1.4.0...1.5.0) (2023-07-02)
+
+
+### Bug Fixes
+
+* **is_object:** check a function as object ([44e56bc](https://github.com/TomokiMiyauci/isx/commit/44e56bc29754ca4a842f6eac5d81094efc892489))
+
+
+### Features
+
+* **object/is_iterable:** add checking iterable subtype of object ([1e5b4ca](https://github.com/TomokiMiyauci/isx/commit/1e5b4ca47a7d7569e57c0706c502d42095811757))
+* **object:** add strict type version of isAsyncIterable ([1a5155b](https://github.com/TomokiMiyauci/isx/commit/1a5155be7189da98d7f6b540bb01f07993445182))
+
 # [1.5.0-beta.1](https://github.com/TomokiMiyauci/isx/compare/1.4.0...1.5.0-beta.1) (2023-07-02)
 
 
