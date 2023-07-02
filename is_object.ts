@@ -1,8 +1,6 @@
 // Copyright © 2021 Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import { isNull } from "./is_null.ts";
-
 /** Whether the input is `object` or not.
  * @param input - Any input.
  *
@@ -14,5 +12,7 @@ import { isNull } from "./is_null.ts";
  * ```
  */
 export function isObject(input: unknown): input is object {
-  return typeof input === "object" && !isNull(input);
+  const type = typeof input;
+
+  return (type === "object" && !!input) || type === "function";
 }
