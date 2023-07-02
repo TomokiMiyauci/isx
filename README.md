@@ -438,7 +438,7 @@ assertEquals(isAsyncIterable({}), false);
 
 ### isIterable
 
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/object/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_iterable.ts)
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/object/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fobject%2Fis_iterable.ts)
 
 Whether the input is `Iterable` or not.
 
