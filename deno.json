@@ -1,8 +1,8 @@
 {
   "tasks": {
-    "test": "deno test --doc --import-map=./_test_import_map.json",
+    "test": "deno test --import-map=./_test_import_map.json --doc",
     "coverage": "deno coverage --exclude=test.ts --exclude=_fixture.ts",
-    "build:npm": "deno run -A _tools/build_npm.ts"
+    "build:npm": "deno run -A --no-lock _tools/build_npm.ts"
   },
   "compilerOptions": {
     "noFallthroughCasesInSwitch": true,
@@ -11,21 +11,15 @@
     "noUncheckedIndexedAccess": true
   },
   "fmt": {
-    "files": {
-      "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
-    }
+    "exclude": ["CHANGELOG.md"]
   },
   "lint": {
-    "files": {
-      "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
-    },
+    "exclude": ["npm", "CHANGELOG.md"],
     "rules": {
       "exclude": ["ban-types"]
     }
   },
   "test": {
-    "files": {
-      "exclude": ["npm", "CHANGELOG.md", "CODE_OF_CONDUCT.md"]
-    }
+    "exclude": ["npm", "CHANGELOG.md"]
   }
 }
