@@ -19,6 +19,8 @@ import { isFunction } from "./is_function.ts";
  * );
  * assertEquals(isAsyncIterable(() => {}), false);
  * ```
+ *
+ * @deprecated Use {@link object/is_async_iterable} instead.
  */
 export function isAsyncIterable<T>(input: unknown): input is AsyncIterable<T> {
   return isFunction(Object(input)[Symbol.asyncIterator]);
