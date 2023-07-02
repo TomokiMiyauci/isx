@@ -545,6 +545,4 @@ This prevents the inclusion of many unnecessary modules.
 
 ## License
 
-Copyright © 2023-present [Tomoki Miyauchi](https://github.com/TomokiMiyauci).
-
-Released under the [MIT](./LICENSE) license
+[MIT](LICENSE) © 2021 Tomoki Miyauchi
