@@ -252,19 +252,6 @@ assertEquals(isError(new SyntaxError()), true);
 assertEquals(isError(new Date()), false);
 ```
 
-## isIterable
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_iterable.ts)
-
-Whether the input is `Iterable` or not.
-
-```ts
-import { isIterable } from "https://deno.land/x/isx@$VERSION/is_iterable.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(isIterable(""), true);
-assertEquals(isIterable({}), false);
-```
-
 ## isNonNullable
 
 [![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_non_nullable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_non_nullable.ts)
@@ -277,26 +264,6 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(isNonNullable(""), true);
 assertEquals(isNonNullable(null), false);
 assertEquals(isNonNullable(undefined), false);
-```
-
-## isAsyncIterable
-
-[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/is_async_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fis_async_iterable.ts)
-
-Whether the input is `AsyncIterable` or not.
-
-```ts
-import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/is_async_iterable.ts";
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-assertEquals(
-  isAsyncIterable({
-    async *[Symbol.asyncIterator]() {
-      yield "hello";
-    },
-  }),
-  true,
-);
-assertEquals(isAsyncIterable(() => {}), false);
 ```
 
 ## isRegExp
@@ -445,6 +412,43 @@ assertEquals(isNonNegativeInteger(1.0), true);
 assertEquals(isNonNegativeInteger(-1), false);
 ```
 
+## Object subtypes
+
+Validates a subtype of `object`. All validate functions must satisfy ⊂ `object`.
+
+### isAsyncIterable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/object/is_async_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fobject%2Fis_async_iterable.ts)
+
+Whether the input is `AsyncIterable` or not.
+
+```ts
+import { isAsyncIterable } from "https://deno.land/x/isx@$VERSION/object/is_async_iterable.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(
+  isAsyncIterable({
+    async *[Symbol.asyncIterator]() {
+      yield "hello";
+    },
+  }),
+  true,
+);
+assertEquals(isAsyncIterable({}), false);
+```
+
+### isIterable
+
+[![badge](https://deno.bundlejs.com/?q=https://deno.land/x/isx/object/is_iterable.ts&badge=)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fisx%2Fobject%2Fis_iterable.ts)
+
+Whether the input is `Iterable` or not.
+
+```ts
+import { isIterable } from "https://deno.land/x/isx@$VERSION/object/is_iterable.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+assertEquals(isIterable(""), true);
+assertEquals(isIterable({}), false);
+```
+
 ## Iterable subtypes
 
 Validates a subtype of `Iterable`. All validate functions must satisfy ⊂
@@ -541,6 +545,4 @@ This prevents the inclusion of many unnecessary modules.
 
 ## License
 
-Copyright © 2023-present [Tomoki Miyauchi](https://github.com/TomokiMiyauci).
-
-Released under the [MIT](./LICENSE) license
+[MIT](LICENSE) © 2021 Tomoki Miyauchi

@@ -16,6 +16,8 @@ Deno.test({
       "{}": true,
       error: true,
       promise: true,
+      function: true,
+      "() => {}": true,
     }).forEach(([input, expected]) => assertEquals(isObject(input), expected));
   },
 });

@@ -1,4 +1,4 @@
-// Copyright 2023-latest Tomoki Miyauchi. All rights reserved. MIT license.
+// Copyright © 2021 Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
 import { isPositiveNumber } from "./is_positive_number.ts";
