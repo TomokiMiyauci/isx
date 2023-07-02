@@ -12,6 +12,8 @@ import { isFunction } from "./is_function.ts";
  * assertEquals(isIterable(""), true)
  * assertEquals(isIterable({}), false)
  * ```
+ *
+ * @deprecated Use {@link object/is_iterable} instead.
  */
 export function isIterable<T>(input: unknown): input is Iterable<T> {
   return isFunction(Object(input)[Symbol.iterator]);
